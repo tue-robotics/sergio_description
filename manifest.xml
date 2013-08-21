@@ -1,0 +1,16 @@
+<package>
+  <description brief="amigo2_description">
+
+     amigo2_description
+
+  </description>
+  <author>Janno Lunenburg</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/amigo2_description</url>
+  <depend package="xacro"/>
+  <depend package="urdf"/>
+
+</package>
+
+
