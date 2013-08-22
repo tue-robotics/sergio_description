@@ -39,7 +39,7 @@
     <include filename="$(find amigo2_description)/urdf/xacro/kinect/top_kinect.urdf.xacro" />
     
     <!--========BUILD LASER======-->
-    <include filename="$(find amigo2_description)/urdf/xacro/laser/laser.urdf.xacro" /> 
+    <include filename="$(find amigo2_description)/urdf/xacro/laser/laser.urdf.xacro" />
 
 
 </robot>

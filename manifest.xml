@@ -10,6 +10,7 @@
   <url>http://ros.org/wiki/amigo2_description</url>
   <depend package="xacro"/>
   <depend package="urdf"/>
+  <depend package="sensor_msgs"/>
 
 </package>
 
