@@ -1,13 +1,21 @@
 <?xml version="1.0"?>
 <launch>
+
+    <arg name="robot_name" default="amigo2"/>
     
     <!-- load robot -->
-    <param name="robot_description" command="$(find xacro)/xacro.py '$(find amigo2_description)/urdf/xacro/robot.urdf.xacro' " />
+    <param name="/$(arg robot_name)/robot_description" command="$(find xacro)/xacro.py '$(find amigo2_description)/urdf/xacro/robot.urdf.xacro' " />
     
     <!-- state publisher -->
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" output="screen"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" output="screen" ns="$(arg robot_name)">
+        <param name="publish_frequency" type="double" value="50.0" />
+        <param name="tf_prefix" type="string" value="$(arg robot_name)" />
+        <remap from="joint_states" to="/$(arg robot_name)/joint_states"/>
+    </node>
     
     <!-- dummy joint publisher -->
-    <node name="dummy_joint_publisher" pkg="amigo2_description" type="publish_jointstates.py"/>
+    <node name="dummy_joint_publisher" pkg="amigo2_description" type="publish_jointstates.py">
+        <remap from="joint_states" to="/$(arg robot_name)/joint_states"/>
+    </node>
 
 </launch>
