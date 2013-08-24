@@ -133,6 +133,12 @@ if __name__ == '__main__':
     msg.velocity.append(0)
     msg.effort.append(0)
     
+    # Torso laser
+    msg.name.append("torso_laser_joint")
+    msg.position.append(0.3)
+    msg.velocity.append(0)
+    msg.effort.append(0)
+    
     rospy.loginfo("Publishing msg {0}".format(msg))    
     
     while (not rospy.is_shutdown()):
