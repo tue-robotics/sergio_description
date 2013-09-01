@@ -41,6 +41,9 @@
     <!--========BUILD LASER======-->
     <include filename="$(find amigo2_description)/urdf/xacro/laser/laser.urdf.xacro" />
     <include filename="$(find amigo2_description)/urdf/xacro/laser/torso_laser.urdf.xacro" />
+    
+    <!-- GAZEBO -->
+    <include filename="$(find amigo2_description)/urdf/xacro/gazebo.urdf.xacro"/>
 
 
 </robot>
