@@ -553,8 +553,8 @@
         <limit>
           <lower>0</lower>
           <upper>1.57</upper>
-          <effort>13.4</effort>
-          <velocity>1</velocity>
+          <effort>1000</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <damping>6</damping>
@@ -620,8 +620,8 @@
         <limit>
           <lower>0</lower>
           <upper>1.57</upper>
-          <effort>13.4</effort>
-          <velocity>1</velocity>
+          <effort>1000</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <damping>6</damping>
@@ -634,12 +634,12 @@
         <pose>0.3899 0 0 0 -0 0</pose>
         <mass>0.401</mass>
         <inertia>
-          <ixx>0.0632875</ixx>
+          <ixx>0.0223675</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0.0248572</iyy>
-          <iyz>0</iyz>
-          <izz>0.0670447</izz>
+          <iyz>-4.81381e-06</iyz>
+          <izz>0.0261247</izz>
         </inertia>
       </inertial>
       <collision name='trunk_collision'>
@@ -775,8 +775,8 @@
         <limit>
           <lower>0</lower>
           <upper>1.57</upper>
-          <effort>13.4</effort>
-          <velocity>1</velocity>
+          <effort>1000</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <damping>6</damping>
@@ -1546,7 +1546,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -1683,7 +1683,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -1820,7 +1820,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -1957,7 +1957,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -2615,7 +2615,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -2752,7 +2752,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -2889,7 +2889,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -3026,7 +3026,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
