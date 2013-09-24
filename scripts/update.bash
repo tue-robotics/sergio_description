@@ -16,4 +16,5 @@ sed -i '/Warning/d' $ROBOT_DESCRIPTION_DIR/sdf/amigo2.sdf
 
 # Fix media paths
 sed -i 's/model:\/\/amigo_description\/media/model:\/\/media/g' $ROBOT_DESCRIPTION_DIR/sdf/amigo2.sdf
+sed -i 's/model:\/\/amigo2_description\/media/model:\/\/media/g' $ROBOT_DESCRIPTION_DIR/sdf/amigo2.sdf
 

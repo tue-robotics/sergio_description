@@ -498,7 +498,7 @@
       <pose>-0.185 0 0.17 0 -0 0</pose>
       <inertial>
         <pose>0.195 0 0 0 -0 0</pose>
-        <mass>0.1</mass>
+        <mass>5</mass>
         <inertia>
           <ixx>0.001</ixx>
           <ixy>0</ixy>
@@ -565,7 +565,7 @@
       <pose>0.205 0 0.17 -0.00159265 0.00159265 3.14159</pose>
       <inertial>
         <pose>0.20575 0 0 0 -0 0</pose>
-        <mass>0.1</mass>
+        <mass>5</mass>
         <inertia>
           <ixx>0.001</ixx>
           <ixy>0</ixy>
@@ -631,15 +631,15 @@
     <link name='trunk'>
       <pose>-0.206499 -5.29396e-23 0.169345 -2.01992e-09 -2.01992e-09 2.53654e-06</pose>
       <inertial>
-        <pose>0.3899 0 0 0 -0 0</pose>
-        <mass>0.401</mass>
+        <pose>0.229007 0 0 0 -0 0</pose>
+        <mass>10.301</mass>
         <inertia>
           <ixx>0.0223675</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.0248572</iyy>
+          <iyy>0.0355928</iyy>
           <iyz>-4.81381e-06</iyz>
-          <izz>0.0261247</izz>
+          <izz>0.0368602</izz>
         </inertia>
       </inertial>
       <collision name='trunk_collision'>
@@ -784,7 +784,7 @@
       </axis>
     </joint>
     <link name='neck_pan'>
-      <pose>0.393501 1.52193e-06 0.169345 -1.57469 1.5692 -1.5731</pose>
+      <pose>0.293501 1.26827e-06 0.169345 -1.57469 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0.0335 0 -0 0</pose>
         <mass>0.05</mass>
@@ -853,7 +853,7 @@
       </axis>
     </joint>
     <link name='neck_tilt'>
-      <pose>0.438 7.25075e-05 0.169344 -1.57469 1.5692 -1.5731</pose>
+      <pose>0.338 7.22539e-05 0.169344 -1.57469 1.5692 -1.5731</pose>
       <inertial>
         <pose>0.0220548 0.00257534 0.0415753 0 -0 0</pose>
         <mass>0.073</mass>
@@ -955,7 +955,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://amigo2_description/media/meshes/kinect_without_base.dae</uri>
+            <uri>model://media/meshes/kinect_without_base.dae</uri>
           </mesh>
         </geometry>
       </visual>

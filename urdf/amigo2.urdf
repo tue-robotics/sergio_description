@@ -250,7 +250,7 @@
   <link name="lower_rear_leg">
     <inertial>
       <origin rpy="0 0 0" xyz="0.195 0.0 0.0"/>
-      <mass value="0.1"/>
+      <mass value="5"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
@@ -275,7 +275,7 @@
   <link name="upper_leg">
     <inertial>
       <origin rpy="0 0 0" xyz="0.20575 0.0 0.0"/>
-      <mass value="0.1"/>
+      <mass value="5"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
@@ -300,7 +300,7 @@
   <link name="trunk">
     <inertial>
       <origin rpy="0 0 0" xyz="0.2225 0.0 0.0"/>
-      <mass value="0.1"/>
+      <mass value="10"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
@@ -1487,7 +1487,7 @@
     <parent link="trunk"/>
     <child link="head_mount"/>
     <axis xyz="0 0 1"/>
-    <origin rpy="3.14 0.0 0.0" xyz="0.6 0.0 0.0"/>
+    <origin rpy="3.14 0.0 0.0" xyz="0.5 0.0 0.0"/>
     <!-- Check length -->
   </joint>
   <link name="neck_pan">

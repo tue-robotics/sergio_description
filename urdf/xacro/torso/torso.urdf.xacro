@@ -14,7 +14,7 @@
     </xacro:my_link>
     
     <!-- Lower rear leg -->
-    <xacro:my_link name="lower_rear_leg" mass="0.1" color="White"><!--ToDo: estimate mass-->
+    <xacro:my_link name="lower_rear_leg" mass="5" color="White"><!--ToDo: estimate mass-->
         <box size="0.390 0.200 0.05" /><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.195 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.195 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
@@ -22,7 +22,7 @@
     </xacro:my_link>
     
     <!-- Upper leg (part from lower rear leg joint to trunk joint) -->
-    <xacro:my_link name="upper_leg" mass="0.1" color="White"><!--ToDo: estimate mass-->
+    <xacro:my_link name="upper_leg" mass="5" color="White"><!--ToDo: estimate mass-->
         <box size="0.4115 0.200 0.1" /><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.20575 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.20575 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
@@ -30,7 +30,7 @@
     </xacro:my_link>
     
     <!-- Trunk -->
-    <xacro:my_link name="trunk" mass="0.1" color="White"><!--ToDo: estimate mass-->
+    <xacro:my_link name="trunk" mass="10" color="White"><!--ToDo: estimate mass-->
         <box size="0.445 0.200 0.15" /><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.2225 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.2225 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
