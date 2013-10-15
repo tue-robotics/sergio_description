@@ -4,7 +4,7 @@
     <arg name="robot_name" default="amigo2"/>
     
     <arg name="robot_init_x" default="0" />
-    <arg name="robot_init_y" default="0" />
+    <arg name="robot_init_y" default="1" />
     <arg name="robot_init_phi" default="0" />
     
     <!-- load robot -->
