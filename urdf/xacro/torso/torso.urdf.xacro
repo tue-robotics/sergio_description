@@ -48,21 +48,24 @@
         <origin xyz="-0.185 0.0 0.045" rpy="0 0 0"/><!-- ToDo: adjust height-->
         <dynamics damping="6.0" friction="4.87"/><!-- ToDo: adjust dynamics-->
         <axis xyz="0 -1 0"/><!--ToDo: DH parameters?-->
-        <limit effort="1000" velocity="10" lower="0.0" upper="1.57" /> <!--ToDo: adjust parameters-->
+        <!--<limit effort="1000" velocity="10" lower="0.0" upper="1.57" />--> <!--ToDo: adjust parameters-->
+        <limit effort="1000" velocity="10" lower="0.87" upper="0.87" /> <!--TEMP: fixed joint positions until control is fixed-->
     </xacro:my_joint>
     
     <xacro:my_joint name="knee_joint" type="revolute" parent="lower_rear_leg" child="upper_leg">
         <origin xyz="0.390 0.0 0." rpy="3.14 3.14 0"/><!-- ToDo: adjust height-->
         <dynamics damping="6.0" friction="4.87"/><!-- ToDo: adjust dynamics-->
         <axis xyz="0 -1 0"/><!--ToDo: DH parameters?-->
-        <limit effort="1000" velocity="10" lower="0.0" upper="1.57" /> <!--ToDo: adjust parameters-->
+        <!--<limit effort="1000" velocity="10" lower="0.0" upper="1.57" />--> <!--ToDo: adjust parameters -->
+        <limit effort="1000" velocity="10" lower="2.0" upper="2.0" /> <!--TEMP: fixed joint positions until control is fixed -->
     </xacro:my_joint>
     
     <xacro:my_joint name="hip_joint" type="revolute" parent="upper_leg" child="trunk">
         <origin xyz="0.4115 0.0 0." rpy="3.14 3.14 0"/><!-- ToDo: adjust height-->
         <dynamics damping="6.0" friction="4.87"/><!-- ToDo: adjust dynamics-->
         <axis xyz="0 -1 0"/><!--ToDo: DH parameters?-->
-        <limit effort="1000" velocity="10" lower="0.0" upper="1.57" /> <!--ToDo: adjust parameters-->
+        <!--<limit effort="1000" velocity="10" lower="0.0" upper="1.57" />--> <!--ToDo: adjust parameters -->
+        <limit effort="1000" velocity="10" lower="2.36" upper="2.36" /> <!--TEMP: fixed joint positions until control is fixed-->
     </xacro:my_joint>
 
 </robot>

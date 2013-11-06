@@ -334,7 +334,7 @@
     <origin rpy="0 0 0" xyz="-0.185 0.0 0.045"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
-    <limit effort="1000" lower="0.0" upper="1.57" velocity="10"/>
+    <limit effort="1000" lower="0.87" upper="0.87" velocity="10"/>
   </joint>
   <joint name="knee_joint" type="revolute">
     <parent link="lower_rear_leg"/>
@@ -342,7 +342,7 @@
     <origin rpy="3.14 3.14 0" xyz="0.390 0.0 0."/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
-    <limit effort="1000" lower="0.0" upper="1.57" velocity="10"/>
+    <limit effort="1000" lower="2.0" upper="2.0" velocity="10"/>
   </joint>
   <joint name="hip_joint" type="revolute">
     <parent link="upper_leg"/>
@@ -350,7 +350,7 @@
     <origin rpy="3.14 3.14 0" xyz="0.4115 0.0 0."/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
-    <limit effort="1000" lower="0.0" upper="1.57" velocity="10"/>
+    <limit effort="1000" lower="2.36" upper="2.36" velocity="10"/>
   </joint>
   <!--========BUILD ARMS======-->
   <author>Rob Janssen, Kris van Tienhoven, Janno Lunenburg</author>
