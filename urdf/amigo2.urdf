@@ -2004,9 +2004,9 @@
       <package>amigo2_description</package>
       <group_summary_file>custom/joint_groups.yaml</group_summary_file>
     </plugin>
-    <plugin filename="libAmigoBaseController.so" name="base_controller">
+    <plugin filename="libAmigo2BaseController.so" name="base_controller">
       <package>amigo2_controller_configuration_gazebo</package>
-      <parameter_file>/parameters/mod_base_controller.yaml</parameter_file>
+      <parameter_file>/parameters/base_controller.yaml</parameter_file>
       <node_namespace>base</node_namespace>
       <odomTopic>odom</odomTopic>
     </plugin>
