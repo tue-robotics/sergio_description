@@ -461,7 +461,7 @@
           <node_namespace>base</node_namespace>
           <frameName>base_laser</frameName>
         </plugin>
-        <pose>0.31 0 0.24 0 -0 0</pose>
+        <pose>0.31 0 0.24 3.14 -0 0</pose>
       </sensor>
       <velocity_decay>
         <linear>0</linear>
