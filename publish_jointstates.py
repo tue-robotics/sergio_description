@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     rospy.init_node('tst_jointstate_publishing')
     
-    pub = rospy.Publisher("/joint_states", sensor_msgs.msg.JointState)
+    pub = rospy.Publisher("/sergio/joint_states", sensor_msgs.msg.JointState)
     msg = sensor_msgs.msg.JointState()
     msg.header.stamp = rospy.Time.now()
     
