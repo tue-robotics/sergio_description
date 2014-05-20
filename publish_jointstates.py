@@ -142,6 +142,7 @@ if __name__ == '__main__':
     rospy.loginfo("Publishing msg {0}".format(msg))    
     
     while (not rospy.is_shutdown()):
+        msg.header.stamp = rospy.Time.now()
         pub.publish(msg)
         rospy.sleep(0.1)
     
