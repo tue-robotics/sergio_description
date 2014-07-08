@@ -234,6 +234,18 @@
 		<node_namespace>base</node_namespace>
         <odomTopic>/sergio/base/measurements</odomTopic>
     </plugin>
+    
+    <plugin name="left_gripper_controller" filename="libAmigoGripperController.so">
+		<side>left</side>
+		<referenceTopic>/sergio/left_gripper/references</referenceTopic>
+		<measurementTopic>/sergio/left_gripper/measurements</measurementTopic>
+    </plugin>
+
+    <plugin name="right_gripper_controller" filename="libAmigoGripperController.so">
+		<side>right</side>
+		<referenceTopic>/sergio/right_gripper/references</referenceTopic>
+		<measurementTopic>/sergio/right_gripper/measurements</measurementTopic>
+    </plugin>
 </gazebo>
 
 </robot>
