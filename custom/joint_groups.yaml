@@ -58,3 +58,11 @@ robot_joint_groups:
           - neck_tilt_joint
       parameter_file_package: "sergio_controller_configuration_gazebo"
       parameter_file_path: "/parameters/head_controller.yaml"
+    - name: torso_laser
+      reference_topic: "/sergio/torso_laser/references"
+      measurement_topic: "/sergio/torso_laser/measurements"
+      joint_names:
+          - torso_laser_joint
+      parameter_file_package: "sergio_controller_configuration_gazebo"
+      parameter_file_path: "/parameters/torso_laser_controller.yaml"
+      
