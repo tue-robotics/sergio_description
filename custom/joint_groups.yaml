@@ -1,7 +1,7 @@
 robot_joint_groups:
     - name: arm_left
-      reference_topic: "/amigo2/arm_left/references"
-      measurement_topic: "/amigo2/arm_left/measurements"
+      reference_topic: "/sergio/arm_left/references"
+      measurement_topic: "/sergio/arm_left/measurements"
       joint_names:
           - shoulder_yaw_joint_left
           - shoulder_pitch_joint_left
@@ -10,11 +10,11 @@ robot_joint_groups:
           - elbow_roll_joint_left
           - wrist_pitch_joint_left
           - wrist_yaw_joint_left
-      parameter_file_package: "amigo2_controller_configuration_gazebo"
+      parameter_file_package: "sergio_controller_configuration_gazebo"
       parameter_file_path: "/parameters/arm_controller_left.yaml"
     - name: arm_right
-      reference_topic: "/amigo2/arm_right/references"
-      measurement_topic: "/amigo2/arm_right/measurements"
+      reference_topic: "/sergio/arm_right/references"
+      measurement_topic: "/sergio/arm_right/measurements"
       joint_names:
           - shoulder_yaw_joint_right
           - shoulder_pitch_joint_right
@@ -23,38 +23,38 @@ robot_joint_groups:
           - elbow_roll_joint_right
           - wrist_pitch_joint_right
           - wrist_yaw_joint_right
-      parameter_file_package: "amigo2_controller_configuration_gazebo"
+      parameter_file_package: "sergio_controller_configuration_gazebo"
       parameter_file_path: "/parameters/arm_controller_right.yaml"
     - name: gripper_left
-      reference_topic: "/amigo2/gripper_left/references"
-      measurement_topic: "/amigo2/gripper_left/measurements"
+      reference_topic: "/sergio/gripper_left/references"
+      measurement_topic: "/sergio/gripper_left/measurements"
       joint_names:
           - finger1_joint_left
           - finger2_joint_left
-      parameter_file_package: "amigo2_controller_configuration_gazebo"
+      parameter_file_package: "sergio_controller_configuration_gazebo"
       parameter_file_path: "/parameters/gripper_controller_left.yaml"
     - name: gripper_right
-      reference_topic: "/amigo2/gripper_right/references"
-      measurement_topic: "/amigo2/gripper_right/measurements"
+      reference_topic: "/sergio/gripper_right/references"
+      measurement_topic: "/sergio/gripper_right/measurements"
       joint_names:
           - finger1_joint_right
           - finger2_joint_right
-      parameter_file_package: "amigo2_controller_configuration_gazebo"
+      parameter_file_package: "sergio_controller_configuration_gazebo"
       parameter_file_path: "/parameters/gripper_controller_right.yaml"
     - name: torso
-      reference_topic: "/amigo2/torso/references"
-      measurement_topic: "/amigo2/torso/measurements"
+      reference_topic: "/sergio/torso/references"
+      measurement_topic: "/sergio/torso/measurements"
       joint_names:
           - ankle_joint
           - knee_joint
           - hip_joint
-      parameter_file_package: "amigo2_controller_configuration_gazebo"
+      parameter_file_package: "sergio_controller_configuration_gazebo"
       parameter_file_path: "/parameters/torso_controller.yaml"
     - name: head
-      reference_topic: "/amigo2/head/references"
-      measurement_topic: "/amigo2/head/measurements"
+      reference_topic: "/sergio/head/references"
+      measurement_topic: "/sergio/head/measurements"
       joint_names:
           - neck_pan_joint
           - neck_tilt_joint
-      parameter_file_package: "amigo2_controller_configuration_gazebo"
+      parameter_file_package: "sergio_controller_configuration_gazebo"
       parameter_file_path: "/parameters/head_controller.yaml"

@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-import roslib; roslib.load_manifest('amigo2_description')
+import roslib; roslib.load_manifest('sergio_description')
 
 import sys
 

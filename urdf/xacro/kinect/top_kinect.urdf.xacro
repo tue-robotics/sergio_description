@@ -25,7 +25,7 @@
       <geometry>
 		<!--<box size="0.001 0.001 0.001"/>--><!--Changed to 0.001 because otherwise it doesn't work-->
         <!--mesh filename="package://amigo_description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
-        <mesh filename="package://amigo2_description/media/meshes/kinect_without_base.dae"/>
+        <mesh filename="package://sergio_description/media/meshes/kinect_without_base.dae"/>
       </geometry>
     </visual>
     <!--<collision>

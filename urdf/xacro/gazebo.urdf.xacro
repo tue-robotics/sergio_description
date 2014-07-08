@@ -225,14 +225,14 @@
 
 <gazebo>
     <plugin name="position_controller" filename="libPositionController.so">
-		<package>amigo2_description</package>
+		<package>sergio_description</package>
 		<group_summary_file>custom/joint_groups.yaml</group_summary_file>
     </plugin>
-    <plugin name="base_controller" filename="libAmigo2BaseController.so">
-		<package>amigo2_controller_configuration_gazebo</package>
+    <plugin name="base_controller" filename="libSergioBaseController.so">
+		<package>sergio_controller_configuration_gazebo</package>
 		<parameter_file>/parameters/base_controller.yaml</parameter_file>
 		<node_namespace>base</node_namespace>
-        <odomTopic>odom</odomTopic>
+        <odomTopic>/sergio/base/measurements</odomTopic>
     </plugin>
 </gazebo>
 

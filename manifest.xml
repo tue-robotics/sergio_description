@@ -1,16 +1,17 @@
 <package>
-  <description brief="amigo2_description">
+  <description brief="sergio_description">
 
-     amigo2_description
+     sergio_description
 
   </description>
   <author>Janno Lunenburg</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/amigo2_description</url>
+  <url>http://ros.org/wiki/sergio_description</url>
   <depend package="xacro"/>
   <depend package="urdf"/>
   <depend package="sensor_msgs"/>
+  <depend package="sergio_gazebo"/>
 
 </package>
 

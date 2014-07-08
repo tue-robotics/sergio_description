@@ -955,7 +955,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://amigo2_description/media/meshes/kinect_without_base.dae</uri>
+            <uri>model://media/meshes/kinect_without_base.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -3391,11 +3391,11 @@
     </joint>
     <static>0</static>
     <plugin name='position_controller' filename='libPositionController.so'>
-      <package>amigo2_description</package>
+      <package>sergio_description</package>
       <group_summary_file>custom/joint_groups.yaml</group_summary_file>
     </plugin>
-    <plugin name='base_controller' filename='libAmigo2BaseController.so'>
-      <package>amigo2_controller_configuration_gazebo</package>
+    <plugin name='base_controller' filename='libSergioBaseController.so'>
+      <package>sergio_controller_configuration_gazebo</package>
       <parameter_file>/parameters/base_controller.yaml</parameter_file>
       <node_namespace>base</node_namespace>
       <odomTopic>odom</odomTopic>
