@@ -457,7 +457,7 @@
           <gaussianNoise>0.005</gaussianNoise>
           <alwaysOn>1</alwaysOn>
           <updateRate>40</updateRate>
-          <topicName>base_front_laser</topicName>
+          <topicName>base_front_scan</topicName>
           <node_namespace>base</node_namespace>
           <frameName>base_laser</frameName>
         </plugin>
@@ -3398,7 +3398,7 @@
       <package>sergio_controller_configuration_gazebo</package>
       <parameter_file>/parameters/base_controller.yaml</parameter_file>
       <node_namespace>base</node_namespace>
-      <odomTopic>odom</odomTopic>
+      <odomTopic>/sergio/base/measurements</odomTopic>
     </plugin>
   </model>
 </sdf>
