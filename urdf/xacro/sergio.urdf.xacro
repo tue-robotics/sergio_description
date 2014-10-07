@@ -14,36 +14,36 @@
     <!--get link & joint definitions -->
     <!--Definitions from default package?-->
     <!--get link & joint definitions -->
-    <!--<include filename="$(find amigo_robot_model)/description/definitions.xacro" />-->
-    <include filename="$(find amigo_description)/urdf/xacro/macro_definitions.xacro" />
+    <!--<xacro:include filename="$(find amigo_robot_model)/description/definitions.xacro" />-->
+    <xacro:include filename="$(find amigo_description)/urdf/xacro/macro_definitions.xacro" />
 
     <!--get custom materials -->
-    <!--<include filename="$(find amigo_robot_model)/description/materials.urdf.xacro" />-->
-    <include filename="$(find amigo_description)/urdf/xacro/materials.urdf.xacro" />
+    <!--<xacro:include filename="$(find amigo_robot_model)/description/materials.urdf.xacro" />-->
+    <xacro:include filename="$(find amigo_description)/urdf/xacro/materials.urdf.xacro" />
     
     <!--========BUILD BASE======-->
-    <include filename="$(find sergio_description)/urdf/xacro/base/base.urdf.xacro" />
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/base/base.urdf.xacro" />
     
     <!--========BUILD TORSO======-->
-    <include filename="$(find sergio_description)/urdf/xacro/torso/torso.urdf.xacro" />
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/torso/torso.urdf.xacro" />
     
     <!--========BUILD ARMS======-->
-    <include filename="$(find sergio_description)/urdf/xacro/arms/arm.urdf.xacro" />
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/arms/arm.urdf.xacro" />
     <xacro:arm whichside="right" sidesign="+1.0" rollsign="+"/>
     <xacro:arm whichside="left"  sidesign="-1.0" rollsign="-"/>
     
     <!--========BUILD HEAD======-->
-    <include filename="$(find sergio_description)/urdf/xacro/head/head.urdf.xacro" />
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/head/head.urdf.xacro" />
     
     <!--========BUILD KINECT======-->
-    <include filename="$(find sergio_description)/urdf/xacro/kinect/top_kinect.urdf.xacro" />
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/kinect/top_kinect.urdf.xacro" />
     
     <!--========BUILD LASER======-->
-    <include filename="$(find sergio_description)/urdf/xacro/laser/laser.urdf.xacro" />
-    <include filename="$(find sergio_description)/urdf/xacro/laser/torso_laser.urdf.xacro" />
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/laser.urdf.xacro" />
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/torso_laser.urdf.xacro" />
     
     <!-- GAZEBO -->
-    <include filename="$(find sergio_description)/urdf/xacro/gazebo.urdf.xacro"/>
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/gazebo.urdf.xacro"/>
 
 
 </robot>

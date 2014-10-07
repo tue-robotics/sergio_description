@@ -18,3 +18,9 @@ sed -i '/Warning/d' $ROBOT_DESCRIPTION_DIR/sdf/sergio.sdf
 sed -i 's/model:\/\/amigo_description\/media/model:\/\/media/g' $ROBOT_DESCRIPTION_DIR/sdf/sergio.sdf
 sed -i 's/model:\/\/sergio_description\/media/model:\/\/media/g' $ROBOT_DESCRIPTION_DIR/sdf/sergio.sdf
 
+#copy model to physicless file
+cp $ROBOT_DESCRIPTION_DIR/sdf/sergio.sdf $ROBOT_DESCRIPTION_DIR/sdf/sergio_physicless.sdf
+
+#change controllers in physicless file
+sed -i 's/libPositionController/libPositionController_simple/g' $ROBOT_DESCRIPTION_DIR/sdf/sergio_physicless.sdf
+
