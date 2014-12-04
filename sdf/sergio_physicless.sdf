@@ -3,14 +3,14 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.196154 3.81258e-18 0.0496154 0 -0 0</pose>
+        <pose>0.196154 3.81258e-18 0.181319 0 -0 0</pose>
         <mass>0.91</mass>
         <inertia>
-          <ixx>0.0211371</ixx>
+          <ixx>0.0252199</ixx>
           <ixy>6.80545e-19</ixy>
-          <ixz>0.00617885</ixz>
-          <iyy>0.0334737</iyy>
-          <iyz>-8.80706e-20</iyz>
+          <ixz>-0.0122596</ixz>
+          <iyy>0.0375565</iyy>
+          <iyz>3.68867e-19</iyz>
           <izz>0.0467865</izz>
         </inertia>
       </inertial>
@@ -72,7 +72,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base_laser'>
-        <pose>0.345 0.000103522 0.0799999 3.14 -0 0</pose>
+        <pose>0.345 0 0.185 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.12</size>
@@ -137,7 +137,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_lasertop'>
-        <pose>0.345 0 0.015 3.14 -0 0</pose>
+        <pose>0.345 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.01</size>
@@ -300,7 +300,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_base_laser'>
-        <pose>0.345 0.000103522 0.0799999 3.14 -0 0</pose>
+        <pose>0.345 0 0.185 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.12</size>
@@ -341,7 +341,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_lasertop'>
-        <pose>0.345 0 0.015 3.14 -0 0</pose>
+        <pose>0.345 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.01</size>
