@@ -7,26 +7,26 @@
 
 <!--head-->
 <!-- !!!!!!!!!something without a visual not sure what this is!!!!!!!!!!!! -->
-<link name="head_mount">
-  <inertial>
-    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-    <mass value="0.001"/>
+<xacro:my_link name="head_mount" mass="0.05" color="White">
+    <box size="0.061 0.08 0.08" /><!-- Fill in -->
+    <origin xyz="-0.0505 0.0 0.0" rpy="0 0 0"/>
+    <origin xyz="-0.0505 0.0 0.0" rpy="0 0 0"/>
     <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
-  </inertial>
-</link>
+    <color rgba="0.25 0.25 0.25 1.0"/>
+</xacro:my_link>
 
 <joint name="head_mount_joint" type="fixed">
   <parent link="trunk"/>
   <child link="head_mount"/>
   <axis xyz="0 0 1"/>
-  <origin xyz="0.5 0.0 0.0" rpy="3.14 0.0 0.0"/><!-- Check length -->
+  <origin xyz="0.6057 0.0 -0.01017" rpy="3.14 0.065 0.0"/><!-- Check length -->
 </joint>
 
 <!-- the link that represents the panning part of the neck, is below neck_tilt -->
 <xacro:my_link name="neck_pan" mass="0.05" color="White">
-   <cylinder radius="0.015" length="0.0525" /> 
-   <origin xyz="0.0 0.0 0.0335" rpy="0 0 0"/>
-   <origin xyz="0.0 0.0 0.0335" rpy="0 0 0" />
+   <cylinder radius="0.015" length="0.02" /> 
+   <origin xyz="0.0 0.0 -0.01" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 -0.01" rpy="0 0 0" />
    <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
    <color rgba="0.25 0.25 0.25 1.0"/>
 </xacro:my_link>
@@ -39,9 +39,9 @@
    <mesh filename="package://amigo_description/media/meshes/necktilttextured.dae" scale="0.004 0.004 0.004"/>
 </xacro:my_link_texturedmesh>-->
 <xacro:my_link name="neck_tilt" mass="0.05" color="White">
-   <box size="0.001 0.001 0.001" /><!-- Fill in -->
-   <origin xyz="0.0 -0.0 0.0285" rpy="0 0 0"/>
-   <origin xyz="0.0 -0.0 0.015" rpy="0 0 0" />
+   <box size="0.03 0.03 0.036" /><!-- Fill in -->
+   <origin xyz="0.0 -0.0 0.018" rpy="0 0 0"/>
+   <origin xyz="0.0 -0.0 0.018" rpy="0 0 0" />
    <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /> 
 </xacro:my_link>
 
@@ -55,7 +55,7 @@
   
   <my_link name="head" mass="0" color="White">
     <box size="0.001 0.001 0.001" /><!-- Fill in -->
-   <origin xyz="0 0 0.041" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.041" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 0.141" rpy="0 0 -1.5708"/>
    <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
   </my_link>
@@ -63,6 +63,7 @@
   <joint name="head_joint" type="fixed">
     <parent link="neck_tilt"/>
     <child link="head"/>
+    <origin xyz="0.0 0.0 0.036" rpy="0.0 0.0 0.0"/> 
   </joint>
   
 <!-- the tilt and pan joints-->
@@ -74,10 +75,10 @@
 </xacro:my_joint>
 
 <xacro:my_joint name="neck_tilt_joint" type="revolute" parent="neck_pan" child="neck_tilt">
-   <origin xyz="0.0 0.0 0.0445" rpy="0.0 0.0 0.0"/> 
+   <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
    <dynamics damping="0.1" friction="0.0"/>
    <axis xyz="0 1 0"/>
-   <limit effort="13.4" velocity="1.0" lower="-2.0" upper="2.0" /> 
+   <limit effort="13.4" velocity="1.0" lower="-0.98" upper="0.98" /> 
 </xacro:my_joint>
 
 </robot>
