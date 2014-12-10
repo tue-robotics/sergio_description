@@ -43,6 +43,14 @@
        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
     </xacro:my_link>
+
+    <!-- base - laser interface -->
+    <xacro:my_link name="laser_mount" mass="0.01" color="White">
+       <box size="0.01 0.06 0.035" />
+       <origin xyz="0.005 0.0 0.0175" rpy="0 0 0"/>
+       <origin xyz="0.005 0.0 0.0175" rpy="0 0 0" />
+        <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
+    </xacro:my_link>
     
     <!-- joints -->
     <joint name="base_link_joint" type="fixed">
@@ -70,6 +78,12 @@
         <parent link="base"/>
         <child link="base_torso_mount"/>
         <origin xyz="0.0 0.0 0.055" rpy="0 0 0.0"/><!--ToDo: adjust height-->
+    </joint>
+
+    <joint name="laser_mount_joint" type="fixed">
+        <parent link="base"/>
+        <child link="laser_mount"/>
+        <origin xyz="0.2995 0.0 0.055" rpy="0.0 0.0 0.0"/>
     </joint>
     
 </robot>

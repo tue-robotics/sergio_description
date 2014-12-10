@@ -47,6 +47,9 @@
   <material name="LightGrey">
     <color rgba="0.6 0.6 0.6 1.0"/>
   </material>
+  <material name="Orange">
+    <color rgba="1.0 0.33 0.0 1.0"/>
+  </material>
   <material name="amigo_description/bottomcovers">
     <texture filename="package://amigo_description/media/materials/textures/bottomcovers/finalreduced.jpg"/>
   </material>
@@ -191,6 +194,31 @@
     <material>Gazebo/White</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
+  <link name="laser_mount">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.005 0.0 0.0175"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.005 0.0 0.0175"/>
+      <geometry>
+        <box size="0.01 0.06 0.035"/>
+      </geometry>
+      <material name="White">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.005 0.0 0.0175"/>
+      <geometry>
+        <box size="0.01 0.06 0.035"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="laser_mount">
+    <material>Gazebo/White</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
   <joint name="base_link_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base"/>
@@ -217,6 +245,11 @@
     <child link="base_torso_mount"/>
     <origin rpy="0 0 0.0" xyz="0.0 0.0 0.055"/>
     <!--ToDo: adjust height-->
+  </joint>
+  <joint name="laser_mount_joint" type="fixed">
+    <parent link="base"/>
+    <child link="laser_mount"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.2995 0.0 0.055"/>
   </joint>
   <!--========BUILD TORSO======-->
   <author>Rob Janssen, Kris van Tienhoven</author>
@@ -1606,7 +1639,7 @@
   </joint>
   <!--========BUILD KINECT======-->
   <joint name="top_kinect/base_kinect_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.019 0.0 0.017"/>
+    <origin rpy="0 0 0" xyz="0.03 0.0 0.017"/>
     <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
     <parent link="head"/>
     <child link="top_kinect/openni_camera"/>
@@ -1681,28 +1714,68 @@
       <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
     </inertial>
   </link>
-  <!--========BUILD LASER======-->
-  <author>Janno Lunenburg</author>
+  <!--========BUILD TORSO LASER JOINT======-->
+  <author>Ton Peters</author>
+  <license>BSD</license>
+  <review notes="" status="unreviewed"/>
+  <link name="torso_laser_mount">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.06 0.06 0.018"/>
+      </geometry>
+      <material name="Red">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.06 0.06 0.018"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="torso_laser_mount">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="laser_tilt_joint" type="revolute">
+    <parent link="trunk"/>
+    <child link="torso_laser_mount"/>
+    <origin rpy="3.14 1.57 0.0 " xyz="0.3163 0.0 -0.0671"/>
+    <dynamics damping="0.1" friction="0"/>
+    <!--ToDo: update-->
+    <axis xyz="0 1 0"/>
+    <limit effort="13.4" lower="-0.3" upper="0.3" velocity="1.0"/>
+    <!--ToDo: update-->
+  </joint>
+  <!--========BUILD LASERS======-->
+  <!--<xacro:include filename="$(find sergio_description)/urdf/xacro/laser/base_laser.urdf.xacro" />-->
+  <author>Ton Peters</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
   <link name="base_laser">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0165"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0205"/>
       <mass value="0.5"/>
       <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0165"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0205"/>
       <geometry>
-        <box size="0.06 0.06 0.077"/>
+        <box size="0.06 0.06 0.069"/>
       </geometry>
       <material name="Black">
      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0165"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0205"/>
       <geometry>
-        <box size="0.06 0.06 0.077"/>
+        <box size="0.06 0.06 0.069"/>
       </geometry>
     </collision>
   </link>
@@ -1710,93 +1783,59 @@
     <material>Gazebo/Black</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <joint name="base_laser_joint" type="fixed">
-    <parent link="base"/>
+  <joint name="base_lasercenter_joint" type="fixed">
+    <parent link="laser_mount"/>
     <child link="base_laser"/>
-    <origin rpy="0 0 0" xyz="0.3295 0.0 0.145"/>
-    <axis xyz="0 1 0"/>
-    <dynamics damping="0.1" friction="0"/>
-    <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.03 0.0 0.09"/>
   </joint>
-  <link name="lasertop">
-    <inertial>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.027"/>
-      <mass value="0.01"/>
-      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
-    </inertial>
-    <visual>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.027"/>
-      <geometry>
-        <box size="0.06 0.06 0.01"/>
-      </geometry>
-      <material name="Red">
-     </material>
-    </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.027"/>
-      <geometry>
-        <box size="0.06 0.06 0.01"/>
-      </geometry>
-    </collision>
-  </link>
-  <gazebo reference="lasertop">
-    <material>Gazebo/Red</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <joint name="lasertop_joint" type="fixed">
+  <joint name="base_lasertop_joint" type="fixed">
     <parent link="base_laser"/>
-    <child link="lasertop"/>
+    <child link="base_lasertop"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.023"/>
   </joint>
-  <link name="lasermount">
-    <inertial>
-      <origin rpy="0 0 0" xyz="-0.025 0.0 -0.0725"/>
-      <mass value="0.01"/>
-      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
-    </inertial>
-    <visual>
-      <origin rpy="0 0 0" xyz="-0.025 0.0 -0.0725"/>
-      <geometry>
-        <box size="0.01 0.06 0.035"/>
-      </geometry>
-      <material name="White">
-     </material>
-    </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="-0.025 0.0 -0.0725"/>
-      <geometry>
-        <box size="0.01 0.06 0.035"/>
-      </geometry>
-    </collision>
-  </link>
-  <gazebo reference="lasermount">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <joint name="lasermount_joint" type="fixed">
-    <parent link="base_laser"/>
-    <child link="lasermount"/>
-  </joint>
-  <author>Kris van Tienhoven</author>
-  <license>BSD</license>
-  <review notes="" status="unreviewed"/>
-  <link name="torso_laser">
+  <link name="base_lasertop">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.06 0.06 0.018"/>
+      </geometry>
+      <material name="Orange">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.06 0.06 0.018"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_lasertop">
+    <material>Gazebo/Orange</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <link name="torso_laser">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0205"/>
       <mass value="0.5"/>
       <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.005 0.0 -0.065"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0205"/>
       <geometry>
-        <box size="0.05 0.065 0.12"/>
+        <box size="0.06 0.06 0.069"/>
       </geometry>
       <material name="Black">
      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.005 0.0 -0.065"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0205"/>
       <geometry>
-        <box size="0.05 0.065 0.12"/>
+        <box size="0.06 0.06 0.069"/>
       </geometry>
     </collision>
   </link>
@@ -1804,13 +1843,15 @@
     <material>Gazebo/Black</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <joint name="torso_laser_joint" type="revolute">
-    <parent link="trunk"/>
+  <joint name="torso_lasercenter_joint" type="fixed">
+    <parent link="torso_laser_mount"/>
     <child link="torso_laser"/>
-    <origin rpy="3.14 1.57 0.0 " xyz="0.22 0.0 -0.1"/>
-    <axis xyz="0 1 0"/>
-    <dynamics damping="0.1" friction="0"/>
-    <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0015"/>
+  </joint>
+  <joint name="torso_lasertop_joint" type="fixed">
+    <parent link="torso_laser"/>
+    <child link="torso_lasertop"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.023"/>
   </joint>
   <link name="torso_lasertop">
     <inertial>
@@ -1819,28 +1860,24 @@
       <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.005 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <box size="0.05 0.065 0.01"/>
+        <box size="0.06 0.06 0.018"/>
       </geometry>
-      <material name="Red">
+      <material name="Orange">
      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.005 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <box size="0.05 0.065 0.01"/>
+        <box size="0.06 0.06 0.018"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="torso_lasertop">
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Orange</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <joint name="torso_lasertop_joint" type="fixed">
-    <parent link="torso_laser"/>
-    <child link="torso_lasertop"/>
-  </joint>
   <!-- GAZEBO -->
   <gazebo>
     <link name="base_fixed_link">
@@ -2015,10 +2052,10 @@
         <node_namespace>base</node_namespace>
         <frameName>base_laser</frameName>
       </plugin>
-      <pose>0.329500 0.000000 0.230000 3.140000 0.000000 0.000000</pose>
+      <pose>0.329500 0.000000 0.230000 0.00000 0.000000 0.000000</pose>
     </sensor>
   </gazebo>
-  <gazebo reference="neck_tilt">
+  <gazebo reference="head">
     <sensor name="openni_camera" type="depth">
       <update_rate>20.000000</update_rate>
       <camera name="top_kinect">
@@ -2044,7 +2081,7 @@
         <pointCloudTopicName>rgb/points</pointCloudTopicName>
         <frameName>top_kinect/openni_depth_optical_frame</frameName>
       </plugin>
-      <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
+      <pose>0.019000 0.000000 0.017000 0.000000 0.000000 0.000000</pose>
     </sensor>
   </gazebo>
   <gazebo>
