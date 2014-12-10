@@ -188,12 +188,12 @@
           <node_namespace>base</node_namespace>
           <frameName>base_laser</frameName>
         </plugin>
-        <pose>0.329500 0.000000 0.230000 3.140000 0.000000 0.000000</pose>
+        <pose>0.329500 0.000000 0.230000 0.00000 0.000000 0.000000</pose>
       </sensor>
 
 </gazebo>
 
-<gazebo reference="neck_tilt">
+<gazebo reference="head">
       <sensor name='openni_camera' type='depth'>
         <update_rate>20.000000</update_rate>
         <camera name='top_kinect'>
@@ -219,7 +219,7 @@
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>top_kinect/openni_depth_optical_frame</frameName>
         </plugin>
-        <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
+        <pose>0.019000 0.000000 0.017000 0.000000 0.000000 0.000000</pose>
       </sensor>
 </gazebo>
 
