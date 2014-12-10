@@ -41,6 +41,9 @@
     <!--========BUILD LASER======-->
     <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/laser.urdf.xacro" />
     <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/torso_laser.urdf.xacro" />
+
+    <!--========BUILD ULTRASONE======-->
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/ultrasone/ultrasone.urdf.xacro" />
     
     <!-- GAZEBO -->
     <xacro:include filename="$(find sergio_description)/urdf/xacro/gazebo.urdf.xacro"/>

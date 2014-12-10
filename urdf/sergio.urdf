@@ -1713,7 +1713,7 @@
   <joint name="base_laser_joint" type="fixed">
     <parent link="base"/>
     <child link="base_laser"/>
-    <origin rpy="0 0 0" xyz="0.3295 0.0 0.145"/>
+    <origin rpy="0.0 0 0" xyz="0.3295 0.0 0.145"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1" friction="0"/>
     <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
@@ -1841,6 +1841,160 @@
     <parent link="torso_laser"/>
     <child link="torso_lasertop"/>
   </joint>
+  <!--========BUILD ULTRASONE======-->
+  <author>Ton Peters</author>
+  <license>BSD</license>
+  <review notes="" status="unreviewed"/>
+  <joint name="base_sonar1_joint" type="fixed">
+    <parent link="base"/>
+    <child link="base_sonar1"/>
+    <origin rpy="0.0 0 3.14" xyz="-0.380 0.0 0.0"/>
+  </joint>
+  <link name="base_sonar1">
+    <inertial>
+      <origin rpy="0 0.0 0" xyz="0.005 0.0 0.0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+      <material name="Red">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_sonar1">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="base_sonar2_joint" type="fixed">
+    <parent link="base"/>
+    <child link="base_sonar2"/>
+    <origin rpy="0.0 0 3.14" xyz="-0.380 0.311 0.0"/>
+  </joint>
+  <link name="base_sonar2">
+    <inertial>
+      <origin rpy="0 0.0 0" xyz="0.005 0.0 0.0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+      <material name="Red">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_sonar2">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="base_sonar3_joint" type="fixed">
+    <parent link="base"/>
+    <child link="base_sonar3"/>
+    <origin rpy="0.0 0 3.14" xyz="-0.380 -0.311 0.0"/>
+  </joint>
+  <link name="base_sonar3">
+    <inertial>
+      <origin rpy="0 0.0 0" xyz="0.005 0.0 0.0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+      <material name="Red">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_sonar3">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="base_sonar4_joint" type="fixed">
+    <parent link="base"/>
+    <child link="base_sonar4"/>
+    <origin rpy="0.0 0 -1.57" xyz="-0.370 -0.3115 0.0"/>
+  </joint>
+  <link name="base_sonar4">
+    <inertial>
+      <origin rpy="0 0.0 0" xyz="0.005 0.0 0.0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+      <material name="Red">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_sonar4">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="base_sonar5_joint" type="fixed">
+    <parent link="base"/>
+    <child link="base_sonar5"/>
+    <origin rpy="0.0 0 1.57" xyz="-0.370 0.3115 0.0"/>
+  </joint>
+  <link name="base_sonar5">
+    <inertial>
+      <origin rpy="0 0.0 0" xyz="0.005 0.0 0.0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+      <material name="Red">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.01" radius="0.005"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_sonar5">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
   <!-- GAZEBO -->
   <gazebo>
     <link name="base_fixed_link">
@@ -2015,10 +2169,10 @@
         <node_namespace>base</node_namespace>
         <frameName>base_laser</frameName>
       </plugin>
-      <pose>0.329500 0.000000 0.230000 3.140000 0.000000 0.000000</pose>
+      <pose>0.329500 0.000000 0.230000 0.00000 0.000000 0.000000</pose>
     </sensor>
   </gazebo>
-  <gazebo reference="neck_tilt">
+  <gazebo reference="head">
     <sensor name="openni_camera" type="depth">
       <update_rate>20.000000</update_rate>
       <camera name="top_kinect">
@@ -2044,7 +2198,7 @@
         <pointCloudTopicName>rgb/points</pointCloudTopicName>
         <frameName>top_kinect/openni_depth_optical_frame</frameName>
       </plugin>
-      <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
+      <pose>0.019000 0.000000 0.017000 0.000000 0.000000 0.000000</pose>
     </sensor>
   </gazebo>
   <gazebo>

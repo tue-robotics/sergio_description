@@ -15,7 +15,7 @@
 
 <!-- origin of the laser range finder, from technical drawing -->
 <xacro:my_joint name="base_laser_joint" type="fixed" parent="base" child="base_laser">
-   <origin xyz="0.3295 0.0 0.145" rpy="0 0 0"/><!-- ToDO: determine location -->
+   <origin xyz="0.3295 0.0 0.145" rpy="0.0 0 0"/><!-- ToDO: determine location -->
    <dynamics damping="0.1" friction="0"/>
    <axis xyz="0 1 0"/>
    <limit effort="13.4" velocity="1.0" lower="-0.7809" upper="1.5708" /> 
