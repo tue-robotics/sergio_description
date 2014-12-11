@@ -53,7 +53,7 @@
     </xacro:my_joint>
     
     <xacro:my_joint name="knee_joint" type="revolute" parent="lower_rear_leg" child="upper_leg">
-        <origin xyz="0.390 0.0 0." rpy="3.14 3.14 0"/><!-- ToDo: adjust height-->
+        <origin xyz="0.390 0.0 0.0" rpy="3.14 3.14 0.0"/><!-- ToDo: adjust height-->
         <dynamics damping="6.0" friction="4.87"/><!-- ToDo: adjust dynamics-->
         <axis xyz="0 -1 0"/><!--ToDo: DH parameters?-->
         <limit effort="1000" velocity="0.539" lower="0.0" upper="2.158" /> <!--ToDo: adjust parameters -->
@@ -61,7 +61,7 @@
     </xacro:my_joint>
     
     <xacro:my_joint name="hip_joint" type="revolute" parent="upper_leg" child="trunk">
-        <origin xyz="0.4115 0.0 0." rpy="3.14 3.14 0"/><!-- ToDo: adjust height-->
+        <origin xyz="0.4115 0.0 0.0" rpy="3.14 3.14 0.0"/><!-- ToDo: adjust height-->
         <dynamics damping="6.0" friction="4.87"/><!-- ToDo: adjust dynamics-->
         <axis xyz="0 -1 0"/><!--ToDo: DH parameters?-->
         <limit effort="1000" velocity="0.375" lower="0.85" upper="2.36" /> <!--ToDo: adjust parameters --><!--Velocity: move in 4 s-->

@@ -47,9 +47,6 @@
   <material name="LightGrey">
     <color rgba="0.6 0.6 0.6 1.0"/>
   </material>
-  <material name="Orange">
-    <color rgba="1.0 0.33 0.0 1.0"/>
-  </material>
   <material name="amigo_description/bottomcovers">
     <texture filename="package://amigo_description/media/materials/textures/bottomcovers/finalreduced.jpg"/>
   </material>
@@ -372,7 +369,7 @@
   <joint name="knee_joint" type="revolute">
     <parent link="lower_rear_leg"/>
     <child link="upper_leg"/>
-    <origin rpy="3.14 3.14 0" xyz="0.390 0.0 0."/>
+    <origin rpy="3.14 3.14 0.0" xyz="0.390 0.0 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
     <limit effort="1000" lower="0.0" upper="2.158" velocity="0.539"/>
@@ -380,7 +377,7 @@
   <joint name="hip_joint" type="revolute">
     <parent link="upper_leg"/>
     <child link="trunk"/>
-    <origin rpy="3.14 3.14 0" xyz="0.4115 0.0 0."/>
+    <origin rpy="3.14 3.14 0.0" xyz="0.4115 0.0 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
     <limit effort="1000" lower="0.85" upper="2.36" velocity="0.375"/>
