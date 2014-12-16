@@ -47,6 +47,9 @@
   <material name="LightGrey">
     <color rgba="0.6 0.6 0.6 1.0"/>
   </material>
+  <material name="Orange">
+    <color rgba="1.0 0.33 0.0"/>
+  </material>
   <material name="amigo_description/bottomcovers">
     <texture filename="package://amigo_description/media/materials/textures/bottomcovers/finalreduced.jpg"/>
   </material>
@@ -1804,7 +1807,7 @@
     <material>Gazebo/Black</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <joint name="torso_laser_joint" type="revolute">
+  <joint name="laser_tilt_joint" type="revolute">
     <parent link="trunk"/>
     <child link="torso_laser"/>
     <origin rpy="3.14 1.57 0.0 " xyz="0.22 0.0 -0.1"/>
