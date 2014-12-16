@@ -3,15 +3,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.196154 3.81258e-18 0.181319 0 -0 0</pose>
-        <mass>0.91</mass>
+        <pose>0.0632397 1.02093e-06 0.148842 0 -0 0</pose>
+        <mass>1.17</mass>
         <inertia>
-          <ixx>0.0252199</ixx>
-          <ixy>6.80545e-19</ixy>
-          <ixz>-0.0122596</ixz>
-          <iyy>0.0375565</iyy>
-          <iyz>3.68867e-19</iyz>
-          <izz>0.0467865</izz>
+          <ixx>0.0447293</ixx>
+          <ixy>5.35418e-07</ixy>
+          <ixz>-0.0172342</ixz>
+          <iyy>0.0968734</iyy>
+          <iyz>7.62585e-08</iyz>
+          <izz>0.127851</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -40,10 +40,10 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base'>
-        <pose>0 0 0.075 0 -0 0</pose>
+        <pose>-0.0235 0 0.085 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.7 0.5 0.1</size>
+            <size>0.713 0.5 0.11</size>
           </box>
         </geometry>
         <surface>
@@ -72,10 +72,10 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base_laser'>
-        <pose>0.345 0 0.185 0 -0 0</pose>
+        <pose>0.3295 0 0.2135 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.05 0.065 0.12</size>
+            <size>0.06 0.06 0.077</size>
           </box>
         </geometry>
         <surface>
@@ -103,8 +103,173 @@
           </friction>
         </surface>
       </collision>
+      <collision name='base_link_collision_base_sonar1'>
+        <pose>-0.385 7.96326e-06 0.085 -2.72301e-16 1.57 3.14</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_base_sonar2'>
+        <pose>-0.385 0.311008 0.085 -2.72301e-16 1.57 3.14</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_base_sonar3'>
+        <pose>-0.385 -0.310992 0.085 -2.72301e-16 1.57 3.14</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_base_sonar4'>
+        <pose>-0.369996 -0.3165 0.085 -1.39418e-13 1.57 -1.57</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_base_sonar5'>
+        <pose>-0.369996 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
       <collision name='base_link_collision_base_torso_mount'>
-        <pose>0 0 0.125 0 -0 0</pose>
+        <pose>0 0 0.14 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -136,11 +301,43 @@
           </friction>
         </surface>
       </collision>
-      <collision name='base_link_collision_lasertop'>
-        <pose>0.345 0 0.25 0 -0 0</pose>
+      <collision name='base_link_collision_lasermount'>
+        <pose>0.3045 0 0.1575 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.05 0.065 0.01</size>
+            <size>0.01 0.06 0.035</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_lasertop'>
+        <pose>0.3295 0 0.257 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.06 0.01</size>
           </box>
         </geometry>
         <surface>
@@ -169,10 +366,10 @@
         </surface>
       </collision>
       <collision name='base_link_collision_sidepot_left'>
-        <pose>0 0.275 0.075 0 -0 0</pose>
+        <pose>0 0.28075 0.085 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.4 0.05 0.1</size>
+            <size>0.4 0.0615 0.1</size>
           </box>
         </geometry>
         <surface>
@@ -201,10 +398,10 @@
         </surface>
       </collision>
       <collision name='base_link_collision_sidepot_right'>
-        <pose>0 -0.275 0.075 0 -0 0</pose>
+        <pose>0 -0.28075 0.085 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.4 0.05 0.1</size>
+            <size>0.4 0.0615 0.1</size>
           </box>
         </geometry>
         <surface>
@@ -233,7 +430,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_torso_mounting_frame'>
-        <pose>0 0 0.15 0 -0 0</pose>
+        <pose>0 0 0.165 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.5 0.4 0.05</size>
@@ -286,10 +483,10 @@
         </material>
       </visual>
       <visual name='base_link_visual_base'>
-        <pose>0 0 0.075 0 -0 0</pose>
+        <pose>-0.0235 0 0.085 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.7 0.5 0.1</size>
+            <size>0.713 0.5 0.11</size>
           </box>
         </geometry>
         <material>
@@ -300,10 +497,10 @@
         </material>
       </visual>
       <visual name='base_link_visual_base_laser'>
-        <pose>0.345 0 0.185 0 -0 0</pose>
+        <pose>0.3295 0 0.2135 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.05 0.065 0.12</size>
+            <size>0.06 0.06 0.077</size>
           </box>
         </geometry>
         <material>
@@ -319,8 +516,113 @@
           </script>
         </material>
       </visual>
+      <visual name='base_link_visual_base_sonar1'>
+        <pose>-0.385 7.96326e-06 0.085 -2.72301e-16 1.57 3.14</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_base_sonar2'>
+        <pose>-0.385 0.311008 0.085 -2.72301e-16 1.57 3.14</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_base_sonar3'>
+        <pose>-0.385 -0.310992 0.085 -2.72301e-16 1.57 3.14</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_base_sonar4'>
+        <pose>-0.369996 -0.3165 0.085 -1.39418e-13 1.57 -1.57</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_base_sonar5'>
+        <pose>-0.369996 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <visual name='base_link_visual_base_torso_mount'>
-        <pose>0 0 0.125 0 -0 0</pose>
+        <pose>0 0 0.14 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -340,11 +642,25 @@
           </script>
         </material>
       </visual>
-      <visual name='base_link_visual_lasertop'>
-        <pose>0.345 0 0.25 0 -0 0</pose>
+      <visual name='base_link_visual_lasermount'>
+        <pose>0.3045 0 0.1575 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.05 0.065 0.01</size>
+            <size>0.01 0.06 0.035</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_lasertop'>
+        <pose>0.3295 0 0.257 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.06 0.01</size>
           </box>
         </geometry>
         <material>
@@ -355,10 +671,10 @@
         </material>
       </visual>
       <visual name='base_link_visual_sidepot_left'>
-        <pose>0 0.275 0.075 0 -0 0</pose>
+        <pose>0 0.28075 0.085 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.4 0.05 0.1</size>
+            <size>0.4 0.0615 0.1</size>
           </box>
         </geometry>
         <material>
@@ -369,10 +685,10 @@
         </material>
       </visual>
       <visual name='base_link_visual_sidepot_right'>
-        <pose>0 -0.275 0.075 0 -0 0</pose>
+        <pose>0 -0.28075 0.085 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.4 0.05 0.1</size>
+            <size>0.4 0.0615 0.1</size>
           </box>
         </geometry>
         <material>
@@ -383,7 +699,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_torso_mounting_frame'>
-        <pose>0 0 0.15 0 -0 0</pose>
+        <pose>0 0 0.165 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.5 0.4 0.05</size>
@@ -461,8 +777,32 @@
           <node_namespace>base</node_namespace>
           <frameName>base_laser</frameName>
         </plugin>
-        <pose>0.31 0 0.24 3.14 -0 0</pose>
+        <pose>0.3295 0 0.23 0 -0 0</pose>
       </sensor>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
@@ -495,7 +835,7 @@
       <self_collide>0</self_collide>
     </link>
     <link name='lower_rear_leg'>
-      <pose>-0.185 0 0.17 0 -0 0</pose>
+      <pose>-0.185 0 0.1965 0 -0 0</pose>
       <inertial>
         <pose>0.195 0 0 0 -0 0</pose>
         <mass>5</mass>
@@ -562,7 +902,7 @@
       </axis>
     </joint>
     <link name='upper_leg'>
-      <pose>0.205 0 0.17 -0.00159265 0.00159265 3.14159</pose>
+      <pose>0.205 0 0.1965 -0.00159265 0.00159265 3.14159</pose>
       <inertial>
         <pose>0.20575 0 0 0 -0 0</pose>
         <mass>5</mass>
@@ -629,24 +969,24 @@
       </axis>
     </joint>
     <link name='trunk'>
-      <pose>-0.206499 -5.29396e-23 0.169345 -2.01992e-09 -2.01992e-09 2.53654e-06</pose>
+      <pose>-0.206499 -5.29396e-23 0.195845 -2.01992e-09 -2.01992e-09 2.53654e-06</pose>
       <inertial>
-        <pose>0.229007 0 0 0 -0 0</pose>
-        <mass>10.301</mass>
+        <pose>0.243359 0 -3.32841e-05 0 -0 0</pose>
+        <mass>10.35</mass>
         <inertia>
-          <ixx>0.0223675</ixx>
+          <ixx>0.0223699</ixx>
           <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.0355928</iyy>
+          <ixz>0.000107463</ixz>
+          <iyy>0.0420765</iyy>
           <iyz>-4.81381e-06</iyz>
-          <izz>0.0368602</izz>
+          <izz>0.0433416</izz>
         </inertia>
       </inertial>
       <collision name='trunk_collision'>
-        <pose>0.2225 0 0 0 -0 0</pose>
+        <pose>0.235 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.445 0.2 0.15</size>
+            <size>0.47 0.2 0.15</size>
           </box>
         </geometry>
         <surface>
@@ -658,8 +998,32 @@
           </friction>
         </surface>
       </collision>
+      <collision name='trunk_collision_head_mount'>
+        <pose>0.555307 4.23516e-22 -0.00688981 3.14 0.065 0</pose>
+        <geometry>
+          <box>
+            <size>0.061 0.08 0.08</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
       <collision name='trunk_collision_shoulder_mount_left'>
-        <pose>0.445 0.0650002 0.000246861 -1.57319 -0 0</pose>
+        <pose>0.47 0.0650002 0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.14</length>
@@ -684,7 +1048,7 @@
         </surface>
       </collision>
       <collision name='trunk_collision_shoulder_mount_right'>
-        <pose>0.445 -0.0650002 -0.000246861 -1.57319 -0 0</pose>
+        <pose>0.47 -0.0650002 -0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.14</length>
@@ -709,10 +1073,10 @@
         </surface>
       </collision>
       <visual name='trunk_visual'>
-        <pose>0.2225 0 0 0 -0 0</pose>
+        <pose>0.235 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.445 0.2 0.15</size>
+            <size>0.47 0.2 0.15</size>
           </box>
         </geometry>
         <material>
@@ -722,8 +1086,28 @@
           </script>
         </material>
       </visual>
+      <visual name='trunk_visual_head_mount'>
+        <pose>0.555307 4.23516e-22 -0.00688981 3.14 0.065 0</pose>
+        <geometry>
+          <box>
+            <size>0.061 0.08 0.08</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <visual name='trunk_visual_shoulder_mount_left'>
-        <pose>0.445 0.0650002 0.000246861 -1.57319 -0 0</pose>
+        <pose>0.47 0.0650002 0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.14</length>
@@ -738,7 +1122,7 @@
         </material>
       </visual>
       <visual name='trunk_visual_shoulder_mount_right'>
-        <pose>0.445 -0.0650002 -0.000246861 -1.57319 -0 0</pose>
+        <pose>0.47 -0.0650002 -0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.14</length>
@@ -752,6 +1136,10 @@
           </script>
         </material>
       </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
@@ -784,9 +1172,9 @@
       </axis>
     </joint>
     <link name='neck_pan'>
-      <pose>0.293501 1.26827e-06 0.169345 -1.57469 1.5692 -1.5731</pose>
+      <pose>0.399201 1.53636e-06 0.185675 -3.11872 1.50577 -3.11708</pose>
       <inertial>
-        <pose>0 0 0.0335 0 -0 0</pose>
+        <pose>0 0 -0.01 0 -0 0</pose>
         <mass>0.05</mass>
         <inertia>
           <ixx>0.0001</ixx>
@@ -798,10 +1186,10 @@
         </inertia>
       </inertial>
       <collision name='neck_pan_collision'>
-        <pose>0 0 0.0335 0 -0 0</pose>
+        <pose>0 0 -0.01 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.0525</length>
+            <length>0.02</length>
             <radius>0.015</radius>
           </cylinder>
         </geometry>
@@ -815,10 +1203,10 @@
         </surface>
       </collision>
       <visual name='neck_pan_visual'>
-        <pose>0 0 0.0335 0 -0 0</pose>
+        <pose>0 0 -0.01 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.0525</length>
+            <length>0.02</length>
             <radius>0.015</radius>
           </cylinder>
         </geometry>
@@ -840,7 +1228,7 @@
       <child>neck_pan</child>
       <parent>trunk</parent>
       <axis>
-        <xyz>0.999999 0.00159518 -6.20772e-06</xyz>
+        <xyz>0.997887 0.00159518 -0.0649604</xyz>
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
@@ -853,24 +1241,24 @@
       </axis>
     </joint>
     <link name='neck_tilt'>
-      <pose>0.338 7.22539e-05 0.169344 -1.57469 1.5692 -1.5731</pose>
+      <pose>0.399201 1.53636e-06 0.185675 -3.11872 1.50577 -3.11708</pose>
       <inertial>
-        <pose>0.0220548 0.00257534 0.0415753 0 -0 0</pose>
+        <pose>0.0059863 0.00257534 0.0290274 0 -0 0</pose>
         <mass>0.073</mass>
         <inertia>
-          <ixx>0.00333026</ixx>
-          <ixy>-9.0137e-06</ixy>
-          <ixz>-4.57637e-05</ixz>
-          <iyy>0.00340432</iyy>
-          <iyz>-5.34384e-06</iyz>
-          <izz>0.00338032</izz>
+          <ixx>0.00332243</ixx>
+          <ixy>-2.44658e-06</ixy>
+          <ixz>-1.0476e-05</ixz>
+          <iyy>0.00332498</iyy>
+          <iyz>-4.50685e-06</iyz>
+          <izz>0.00330882</izz>
         </inertia>
       </inertial>
       <collision name='neck_tilt_collision'>
-        <pose>0 -0 0.015 0 -0 0</pose>
+        <pose>0 -0 0.018 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.001 0.001 0.001</size>
+            <size>0.03 0.03 0.036</size>
           </box>
         </geometry>
         <surface>
@@ -881,17 +1269,9 @@
             <ode/>
           </friction>
         </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
       <collision name='neck_tilt_collision_head'>
-        <pose>0 0 0.141 0 0 -1.5708</pose>
+        <pose>0 0 0.177 0 0 -1.5708</pose>
         <geometry>
           <box>
             <size>0.001 0.001 0.001</size>
@@ -923,10 +1303,10 @@
         </surface>
       </collision>
       <visual name='neck_tilt_visual'>
-        <pose>0 -0 0.015 0 -0 0</pose>
+        <pose>0 -0 0.018 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.001 0.001 0.001</size>
+            <size>0.03 0.03 0.036</size>
           </box>
         </geometry>
         <material>
@@ -937,7 +1317,7 @@
         </material>
       </visual>
       <visual name='neck_tilt_visual_head'>
-        <pose>0 0 0.141 0 0 -1.5708</pose>
+        <pose>0 0 0.177 0 0 -1.5708</pose>
         <geometry>
           <box>
             <size>0.001 0.001 0.001</size>
@@ -951,7 +1331,7 @@
         </material>
       </visual>
       <visual name='neck_tilt_visual_top_kinect/openni_camera'>
-        <pose>0.07 0 0.07 0 -0 0</pose>
+        <pose>0.019 0 0.053 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -967,6 +1347,12 @@
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
       <sensor name='openni_camera' type='depth'>
         <update_rate>20</update_rate>
         <camera name='top_kinect'>
@@ -992,23 +1378,17 @@
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>top_kinect/openni_depth_optical_frame</frameName>
         </plugin>
-        <pose>0.07 0 0.07 0 -0 0</pose>
+        <pose>0 0 0.036 0 -0 0</pose>
       </sensor>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='neck_tilt_joint' type='revolute'>
       <child>neck_tilt</child>
       <parent>neck_pan</parent>
       <axis>
-        <xyz>-0.00159519 0.999997 -0.00159265</xyz>
+        <xyz>-0.00169528 0.999997 -0.00148583</xyz>
         <limit>
-          <lower>-2</lower>
-          <upper>2</upper>
+          <lower>-0.98</lower>
+          <upper>0.98</upper>
           <effort>13.4</effort>
           <velocity>1</velocity>
         </limit>
@@ -1018,7 +1398,7 @@
       </axis>
     </joint>
     <link name='torso_laser'>
-      <pose>0.0135005 5.57838e-07 0.0693446 3.14 1.57 3.21683e-12</pose>
+      <pose>0.0135005 5.57838e-07 0.0958446 3.14 1.57 3.21683e-12</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.51</mass>
@@ -1139,7 +1519,7 @@
       </axis>
     </joint>
     <link name='shoulder_link1_left'>
-      <pose>0.2385 0.220001 0.169345 -0.00230874 1.5692 -1.5731</pose>
+      <pose>0.2635 0.220001 0.195845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.25</mass>
@@ -1208,7 +1588,7 @@
       </axis>
     </joint>
     <link name='shoulder_link2_left'>
-      <pose>0.2385 0.220001 0.169345 -1.57311 1.5692 -1.5731</pose>
+      <pose>0.2635 0.220001 0.195845 -1.57311 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.15</mass>
@@ -1275,7 +1655,7 @@
       </axis>
     </joint>
     <link name='upper_arm_left'>
-      <pose>0.2385 0.220001 0.169345 -0.00230874 1.5692 -1.5731</pose>
+      <pose>0.2635 0.220001 0.195845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 -0.2 0 0 -0 0</pose>
         <mass>2.95</mass>
@@ -1344,7 +1724,7 @@
       </axis>
     </joint>
     <link name='elbow_link4_left'>
-      <pose>-0.0815001 0.219983 0.159346 -1.57311 1.5692 -1.5731</pose>
+      <pose>-0.0565001 0.219983 0.185846 -1.57311 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.1</mass>
@@ -1413,7 +1793,7 @@
       </axis>
     </joint>
     <link name='fore_arm_left'>
-      <pose>-0.0815001 0.219983 0.159346 -0.00230874 1.5692 -1.5731</pose>
+      <pose>-0.0565001 0.219983 0.185846 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 -0.14 0 0 -0 0</pose>
         <mass>0.85</mass>
@@ -1482,7 +1862,7 @@
       </axis>
     </joint>
     <link name='wrist_link6_left'>
-      <pose>-0.3615 0.219966 0.149347 -3.14 -7.35023e-06 -3.14159</pose>
+      <pose>-0.3365 0.219966 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.01</mass>
@@ -1551,7 +1931,7 @@
       </axis>
     </joint>
     <link name='hand_left'>
-      <pose>-0.3615 0.219966 0.149347 -3.14 -7.35023e-06 -3.14159</pose>
+      <pose>-0.3365 0.219966 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
         <pose>0.047619 0 0 0 -0 0</pose>
         <mass>0.21</mass>
@@ -1660,7 +2040,7 @@
       </axis>
     </joint>
     <link name='finger1_left'>
-      <pose>-0.4365 0.239965 0.149316 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.4115 0.239965 0.175816 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -1797,7 +2177,7 @@
       </axis>
     </joint>
     <link name='finger1_tip_left'>
-      <pose>-0.4965 0.239965 0.149364 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.4715 0.239965 0.175864 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -1934,7 +2314,7 @@
       </axis>
     </joint>
     <link name='finger2_left'>
-      <pose>-0.4365 0.199965 0.149379 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.4115 0.199965 0.175879 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -2071,7 +2451,7 @@
       </axis>
     </joint>
     <link name='finger2_tip_left'>
-      <pose>-0.4965 0.199965 0.149427 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.4715 0.199965 0.175927 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -2208,7 +2588,7 @@
       </axis>
     </joint>
     <link name='shoulder_link1_right'>
-      <pose>0.238501 -0.219999 0.169345 -0.00230874 1.5692 -1.5731</pose>
+      <pose>0.263501 -0.219999 0.195845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.25</mass>
@@ -2277,7 +2657,7 @@
       </axis>
     </joint>
     <link name='shoulder_link2_right'>
-      <pose>0.238501 -0.219999 0.169345 -1.57311 1.5692 -1.5731</pose>
+      <pose>0.263501 -0.219999 0.195845 -1.57311 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.15</mass>
@@ -2344,7 +2724,7 @@
       </axis>
     </joint>
     <link name='upper_arm_right'>
-      <pose>0.238501 -0.219999 0.169345 -0.00230874 1.5692 -1.5731</pose>
+      <pose>0.263501 -0.219999 0.195845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 -0.2 0 0 -0 0</pose>
         <mass>2.95</mass>
@@ -2413,7 +2793,7 @@
       </axis>
     </joint>
     <link name='elbow_link4_right'>
-      <pose>-0.081499 -0.220017 0.159346 -1.57311 1.5692 -1.5731</pose>
+      <pose>-0.056499 -0.220017 0.185846 -1.57311 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.1</mass>
@@ -2482,7 +2862,7 @@
       </axis>
     </joint>
     <link name='fore_arm_right'>
-      <pose>-0.081499 -0.220017 0.159346 -0.00230874 1.5692 -1.5731</pose>
+      <pose>-0.056499 -0.220017 0.185846 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 -0.14 0 0 -0 0</pose>
         <mass>0.85</mass>
@@ -2551,7 +2931,7 @@
       </axis>
     </joint>
     <link name='wrist_link6_right'>
-      <pose>-0.361499 -0.220034 0.149347 -3.14 -7.35023e-06 -3.14159</pose>
+      <pose>-0.336499 -0.220034 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.01</mass>
@@ -2620,7 +3000,7 @@
       </axis>
     </joint>
     <link name='hand_right'>
-      <pose>-0.361499 -0.220034 0.149347 -3.14 -7.35023e-06 -3.14159</pose>
+      <pose>-0.336499 -0.220034 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
         <pose>0.047619 0 0 0 -0 0</pose>
         <mass>0.21</mass>
@@ -2729,7 +3109,7 @@
       </axis>
     </joint>
     <link name='finger1_right'>
-      <pose>-0.436499 -0.200035 0.149316 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.411499 -0.200035 0.175816 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -2866,7 +3246,7 @@
       </axis>
     </joint>
     <link name='finger1_tip_right'>
-      <pose>-0.496499 -0.200035 0.149364 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.471499 -0.200035 0.175864 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -3003,7 +3383,7 @@
       </axis>
     </joint>
     <link name='finger2_right'>
-      <pose>-0.436499 -0.240035 0.149379 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.411499 -0.240035 0.175879 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -3140,7 +3520,7 @@
       </axis>
     </joint>
     <link name='finger2_tip_right'>
-      <pose>-0.496499 -0.240035 0.149427 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.471499 -0.240035 0.175927 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
