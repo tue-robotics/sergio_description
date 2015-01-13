@@ -37,6 +37,15 @@
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
     </xacro:my_link>
     
+    <!-- torso laser joint (center is the center of rotation of the laser)-->
+	<xacro:my_link name="torso_laser_mount" mass="0.01" color="Black">
+	   <box size="0.0 0.0 0.0" />
+	   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+	   <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+	   <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
+	</xacro:my_link>
+
+
     <!-- joints -->
     <joint name="torso_mount_joint" type="fixed">
         <parent link="base_torso_mount"/>
@@ -67,5 +76,14 @@
         <limit effort="1000" velocity="0.375" lower="0.85" upper="2.36" /> <!--ToDo: adjust parameters --><!--Velocity: move in 4 s-->
         <!--<limit effort="1000" velocity="10" lower="2.36" upper="2.36" />--> <!--TEMP: fixed joint positions until control is fixed-->
     </xacro:my_joint>
+    
+    <joint name="laser_tilt_joint" type="revolute" >
+	   <parent link="trunk" />
+	   <child link="torso_laser_mount"/>
+	   <origin xyz="0.3163 0.0 -0.0671" rpy="3.14 1.57 0.0 "/>
+	   <dynamics damping="0.1" friction="0"/><!--ToDo: update-->
+	   <axis xyz="0 1 0"/>
+	   <limit effort="13.4" velocity="1.0" lower="-0.3" upper="0.3" /> <!--ToDo: update-->
+	</joint>
 
 </robot>

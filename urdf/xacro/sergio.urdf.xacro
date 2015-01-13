@@ -18,7 +18,6 @@
     <xacro:include filename="$(find amigo_description)/urdf/xacro/macro_definitions.xacro" />
 
     <!--get custom materials -->
-    <!--<xacro:include filename="$(find amigo_robot_model)/description/materials.urdf.xacro" />-->
     <xacro:include filename="$(find amigo_description)/urdf/xacro/materials.urdf.xacro" />
     
     <!--========BUILD BASE======-->
@@ -37,9 +36,6 @@
     
     <!--========BUILD KINECT======-->
     <xacro:include filename="$(find sergio_description)/urdf/xacro/kinect/top_kinect.urdf.xacro" />
-
-    <!--========BUILD TORSO LASER JOINT======-->
-    <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/torso_laser_joint.urdf.xacro" />
 
     <!--========BUILD LASERS======-->
     <!--<xacro:include filename="$(find sergio_description)/urdf/xacro/laser/base_laser.urdf.xacro" />-->
