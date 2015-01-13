@@ -1,54 +1,48 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-   <author>Janno Lunenburg</author>
+   <author>Ton Peters</author>
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
 
-<!--the laser at the base of the robot -->
-<xacro:my_link name="base_laser" mass="0.5" color="Black">
-   <box size="0.05 0.065 0.12" /> 
-   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-   <origin xyz="-0.005 0.0 -0.065" rpy="0 0 0" />
+<!--Start of the macro
+@param laser_name, is used to locate the sensor
+@param laser_parent, parent
+@param laser_xyz, transform from parent to laser center (center is at l=0.3 w=0.3 h=55)
+@param laser_rpy, rotation from parent to laser center (x points forward, z to the top)
+-->
+ <xacro:macro name="laser" params="laser_name laser_parent laser_xyz laser_rpy">
+
+<!-- link visualize the black part of the laser-->
+<xacro:my_link name="${laser_name}_laser" mass="0.5" color="Black">
+   <box size="0.06 0.06 0.069" /> 
+   <origin xyz="0.0 0.0 -0.0205" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 -0.0205" rpy="0 0 0" />
    <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
 </xacro:my_link>
 
-<xacro:my_joint name="base_laser_joint" type="fixed" parent="base" child="base_laser">
-   <origin xyz="0.35 0.0 0.175" rpy="0 0 0"/><!-- ToDO: determine location -->
-   <dynamics damping="0.1" friction="0"/>
-   <axis xyz="0 1 0"/>
-   <limit effort="13.4" velocity="1.0" lower="-0.7809" upper="1.5708" /> 
-</xacro:my_joint>
-
-<!--the orange top of the laser-->
-<!--<xacro:my_link_textured name="lasertop" mass="0.01" texture="orange">
-   <box size="0.05 0.065 0.01" />
-   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-   <origin xyz="-0.005 0.0 0.0" rpy="0 0 0" />
-   <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
-</xacro:my_link_textured>-->
-<xacro:my_link name="lasertop" mass="0.01" color="Red"><!--Changed color to red to make it work-->
-   <box size="0.05 0.065 0.01" />
-   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-   <origin xyz="-0.005 0.0 0.0" rpy="0 0 0" />
-   <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
-</xacro:my_link>
-
-<joint name="lasertop_joint" type="fixed">
-    <parent link="base_laser"/>
-    <child link="lasertop"/>
+<!-- joint origin of the laser range finder -->
+<joint name="${laser_name}_lasercenter_joint" type="fixed">
+    <parent link="${laser_parent}"/>
+    <child link="${laser_name}_laser"/>
+    <origin xyz="${laser_xyz}" rpy="${laser_rpy}"/>
 </joint>
 
-<!--the tue logo in front of the laser-->
-<!--<xacro:my_link_texturedmesh name="logo" mass="0.01" texture="amigo_description/logo">
-   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-   <origin xyz="0.025 0.0 -0.14" rpy="0 0 3.1415" />
-   <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
-   <mesh filename="package://amigo2_description/media/meshes/logo.dae" scale="0.0016 0.0016 0.0016"/>
-</xacro:my_link_texturedmesh>
+<!-- joint origin of the orange top -->
+<joint name="${laser_name}_lasertop_joint" type="fixed">
+    <parent link="${laser_name}_laser"/>
+    <child link="${laser_name}_lasertop"/>
+    <origin xyz="0.0 0.0 0.023" rpy="0 0 0"/>
+</joint>
 
-  <joint name="logo_joint" type="fixed">
-    <parent link="base_laser"/>
-    <child link="logo"/>
-  </joint>-->
+<!-- link visual of the orange top -->
+<xacro:my_link name="${laser_name}_lasertop" mass="0.01" color="Orange"><!--Changed color to red to make it work-->
+   <box size="0.06 0.06 0.018" />
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+   <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
+</xacro:my_link>
+
+</xacro:macro>
+
 </robot>

@@ -180,7 +180,7 @@ note: not visible, purely kinematic-->
   <joint name="shoulder_mount_joint_${whichside}" type="fixed">
     <parent link="trunk"/>
     <child link="shoulder_mount_${whichside}"/>
-    <origin xyz="0.445 ${sidesign*-0.22} 0.0" rpy="3.14 0 0.0"/><!-- Check length -->
+    <origin xyz="0.470 ${sidesign*-0.22} 0.0" rpy="3.14 0 0.0"/><!-- Check length -->
   </joint>
 
 <xacro:my_joint name="shoulder_yaw_joint_${whichside}" type="revolute" parent="shoulder_mount_${whichside}" child="shoulder_link1_${whichside}">

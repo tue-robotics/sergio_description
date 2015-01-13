@@ -1,0 +1,10 @@
+Still to do in the URDF model
+* In base.urdf.xacro
+	- determine the height of the floor to the center of the base
+	- current estimate, 85mm, of which 55mm is half the height of the base. 
+* In laser.urdf.xacro
+	- determine the height from center base to center laser.
+	- current estimate 145mm.
+* In top_kinect.urdf.xacro
+	- determine the transform from kinect bottom center to kinect front center
+	- current estimate, center to front 19mm, bottom to center 17mm
