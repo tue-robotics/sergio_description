@@ -122,22 +122,22 @@ if __name__ == '__main__':
     
     ## Neck
     # Neck pan joint
-    #msg.name.append("neck_pan_joint")
-    #msg.position.append(0.0)
-    #msg.velocity.append(0)
-    #msg.effort.append(0)
+    msg.name.append("neck_pan_joint")
+    msg.position.append(0.0)
+    msg.velocity.append(0)
+    msg.effort.append(0)
     
     # Neck tilt joint
-    #msg.name.append("neck_tilt_joint")
-    #msg.position.append(-0.3)
-    #msg.velocity.append(0)
-    #msg.effort.append(0)
+    msg.name.append("neck_tilt_joint")
+    msg.position.append(-0.3)
+    msg.velocity.append(0)
+    msg.effort.append(0)
     
     # Torso laser
-    #msg.name.append("torso_laser_joint")
-    #msg.position.append(0.3)
-    #msg.velocity.append(0)
-    #msg.effort.append(0)
+    msg.name.append("torso_laser_joint")
+    msg.position.append(0.3)
+    msg.velocity.append(0)
+    msg.effort.append(0)
     
     rospy.loginfo("Publishing msg {0}".format(msg))    
     
