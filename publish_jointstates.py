@@ -18,19 +18,19 @@ if __name__ == '__main__':
     
     # Ankle joint
     msg.name.append("ankle_joint")
-    msg.position = [0.69]
+    msg.position = [0.8]
     msg.velocity = [0]
     msg.effort   = [0]
     
     # Knee joint (dummy, not depending on spindle)
     msg.name.append("knee_joint")
-    msg.position.append(1.38)
+    msg.position.append(1.61)
     msg.velocity.append(0)
     msg.effort.append(0)
     
     # hip joint (dummy, not depending on spindle)
     msg.name.append("hip_joint")
-    msg.position.append(0.7)
+    msg.position.append(1.8)
     msg.velocity.append(0)
     msg.effort.append(0)
     
