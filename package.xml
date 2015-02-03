@@ -10,6 +10,8 @@
   <author>Sjoerd van den Dries</author>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>amigo_description</build_depend>
+  <run_depend>amigo_description</run_depend>
 
   <run_depend>xacro</run_depend>
 </package>
