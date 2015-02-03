@@ -1880,7 +1880,8 @@
   <joint name="base_sonar1_joint" type="fixed">
     <parent link="base"/>
     <child link="base_sonar1"/>
-    <origin rpy="0.0 0 3.14" xyz="-0.380 0.0 0.0"/>
+    <!--<origin xyz="-0.380 0.0 0.0" rpy="0.0 0 3.14"/>-->
+    <origin rpy="0.0 0 1.57" xyz="0.370 0.3115 0.0"/>
   </joint>
   <link name="base_sonar1">
     <inertial>
@@ -1910,7 +1911,8 @@
   <joint name="base_sonar2_joint" type="fixed">
     <parent link="base"/>
     <child link="base_sonar2"/>
-    <origin rpy="0.0 0 3.14" xyz="-0.380 0.311 0.0"/>
+    <!--<origin xyz="-0.380 0.311 0.0" rpy="0.0 0 3.14"/>-->
+    <origin rpy="0.0 0 1.57" xyz="0.124 0.3115 0.0"/>
   </joint>
   <link name="base_sonar2">
     <inertial>
@@ -1940,7 +1942,8 @@
   <joint name="base_sonar3_joint" type="fixed">
     <parent link="base"/>
     <child link="base_sonar3"/>
-    <origin rpy="0.0 0 3.14" xyz="-0.380 -0.311 0.0"/>
+    <!--<origin xyz="-0.380 -0.311 0.0" rpy="0.0 0 3.14"/>-->
+    <origin rpy="0.0 0 1.57" xyz="-0.124 0.3115 0.0"/>
   </joint>
   <link name="base_sonar3">
     <inertial>
@@ -1970,7 +1973,7 @@
   <joint name="base_sonar4_joint" type="fixed">
     <parent link="base"/>
     <child link="base_sonar4"/>
-    <origin rpy="0.0 0 -1.57" xyz="-0.370 -0.3115 0.0"/>
+    <origin rpy="0.0 0 1.57" xyz="-0.370 0.3115 0.0"/>
   </joint>
   <link name="base_sonar4">
     <inertial>
@@ -1994,36 +1997,6 @@
     </collision>
   </link>
   <gazebo reference="base_sonar4">
-    <material>Gazebo/Red</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <joint name="base_sonar5_joint" type="fixed">
-    <parent link="base"/>
-    <child link="base_sonar5"/>
-    <origin rpy="0.0 0 1.57" xyz="-0.370 0.3115 0.0"/>
-  </joint>
-  <link name="base_sonar5">
-    <inertial>
-      <origin rpy="0 0.0 0" xyz="0.005 0.0 0.0"/>
-      <mass value="0.05"/>
-      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
-    </inertial>
-    <visual>
-      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
-      <geometry>
-        <cylinder length="0.01" radius="0.005"/>
-      </geometry>
-      <material name="Red">
-     </material>
-    </visual>
-    <collision>
-      <origin rpy="0 1.57 0" xyz="0.005 0.0 0.0"/>
-      <geometry>
-        <cylinder length="0.01" radius="0.005"/>
-      </geometry>
-    </collision>
-  </link>
-  <gazebo reference="base_sonar5">
     <material>Gazebo/Red</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>

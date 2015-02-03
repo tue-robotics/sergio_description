@@ -3,15 +3,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.0632397 1.02093e-06 0.147098 0 -0 0</pose>
-        <mass>1.17</mass>
+        <pose>0.150661 0.0565179 0.149871 0 -0 0</pose>
+        <mass>1.12</mass>
         <inertia>
-          <ixx>0.0444666</ixx>
-          <ixy>5.35418e-07</ixy>
-          <ixz>-0.016691</ixz>
-          <iyy>0.0966108</iyy>
-          <iyz>7.41758e-08</iyz>
-          <izz>0.127851</izz>
+          <ixx>0.0409327</ixx>
+          <ixy>0.00953662</ixy>
+          <ixz>-0.0103394</ixz>
+          <iyy>0.0548699</iyy>
+          <iyz>0.0041063</iyz>
+          <izz>0.0830791</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -136,7 +136,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base_sonar1'>
-        <pose>-0.385 7.96326e-06 0.085 -2.72301e-16 1.57 3.14</pose>
+        <pose>0.370004 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -169,7 +169,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base_sonar2'>
-        <pose>-0.385 0.311008 0.085 -2.72301e-16 1.57 3.14</pose>
+        <pose>0.124004 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -202,7 +202,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base_sonar3'>
-        <pose>-0.385 -0.310992 0.085 -2.72301e-16 1.57 3.14</pose>
+        <pose>-0.123996 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -235,39 +235,6 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base_sonar4'>
-        <pose>-0.369996 -0.3165 0.085 -1.39418e-13 1.57 -1.57</pose>
-        <geometry>
-          <cylinder>
-            <length>0.01</length>
-            <radius>0.005</radius>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
-      <collision name='base_link_collision_base_sonar5'>
         <pose>-0.369996 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
         <geometry>
           <cylinder>
@@ -543,7 +510,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_base_sonar1'>
-        <pose>-0.385 7.96326e-06 0.085 -2.72301e-16 1.57 3.14</pose>
+        <pose>0.370004 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -564,7 +531,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_base_sonar2'>
-        <pose>-0.385 0.311008 0.085 -2.72301e-16 1.57 3.14</pose>
+        <pose>0.124004 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -585,7 +552,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_base_sonar3'>
-        <pose>-0.385 -0.310992 0.085 -2.72301e-16 1.57 3.14</pose>
+        <pose>-0.123996 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -606,27 +573,6 @@
         </material>
       </visual>
       <visual name='base_link_visual_base_sonar4'>
-        <pose>-0.369996 -0.3165 0.085 -1.39418e-13 1.57 -1.57</pose>
-        <geometry>
-          <cylinder>
-            <length>0.01</length>
-            <radius>0.005</radius>
-          </cylinder>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>__default__</uri>
-          </script>
-        </material>
-        <material>
-          <script>
-            <name>Gazebo/Red</name>
-            <uri>__default__</uri>
-          </script>
-        </material>
-      </visual>
-      <visual name='base_link_visual_base_sonar5'>
         <pose>-0.369996 0.3165 0.085 1.39418e-13 1.57 1.57</pose>
         <geometry>
           <cylinder>
@@ -791,10 +737,6 @@
         </plugin>
         <pose>0.3295 0 0.23 0 -0 0</pose>
       </sensor>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
