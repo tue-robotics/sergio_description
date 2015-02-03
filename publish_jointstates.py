@@ -16,23 +16,23 @@ if __name__ == '__main__':
     msg = sensor_msgs.msg.JointState()
     msg.header.stamp = rospy.Time.now()
     
-    # Ankle joint
-    msg.name.append("ankle_joint")
-    msg.position = [0.69]
-    msg.velocity = [0]
-    msg.effort   = [0]
+    ## Ankle joint
+    #msg.name.append("ankle_joint")
+    #msg.position = [0.8]
+    #msg.velocity = [0]
+    #msg.effort   = [0]
     
-    # Knee joint (dummy, not depending on spindle)
-    msg.name.append("knee_joint")
-    msg.position.append(1.38)
-    msg.velocity.append(0)
-    msg.effort.append(0)
+    ## Knee joint (dummy, not depending on spindle)
+    #msg.name.append("knee_joint")
+    #msg.position.append(1.61)
+    #msg.velocity.append(0)
+    #msg.effort.append(0)
     
-    # hip joint (dummy, not depending on spindle)
-    msg.name.append("hip_joint")
-    msg.position.append(0.7)
-    msg.velocity.append(0)
-    msg.effort.append(0)
+    ## hip joint (dummy, not depending on spindle)
+    #msg.name.append("hip_joint")
+    #msg.position.append(1.8)
+    #msg.velocity.append(0)
+    #msg.effort.append(0)
     
     ## Left Arm
     # Shoulder yaw joint
@@ -121,19 +121,19 @@ if __name__ == '__main__':
     msg.effort.append(0)
     
     ## Neck
-    # Neck pan joint
+    ## Neck pan joint
     #msg.name.append("neck_pan_joint")
     #msg.position.append(0.0)
     #msg.velocity.append(0)
     #msg.effort.append(0)
     
-    # Neck tilt joint
+    ## Neck tilt joint
     #msg.name.append("neck_tilt_joint")
     #msg.position.append(-0.3)
     #msg.velocity.append(0)
     #msg.effort.append(0)
     
-    # Torso laser
+    ## Torso laser
     #msg.name.append("torso_laser_joint")
     #msg.position.append(0.3)
     #msg.velocity.append(0)

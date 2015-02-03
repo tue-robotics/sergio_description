@@ -18,7 +18,6 @@
     <xacro:include filename="$(find amigo_description)/urdf/xacro/macro_definitions.xacro" />
 
     <!--get custom materials -->
-    <!--<xacro:include filename="$(find amigo_robot_model)/description/materials.urdf.xacro" />-->
     <xacro:include filename="$(find amigo_description)/urdf/xacro/materials.urdf.xacro" />
     
     <!--========BUILD BASE======-->
@@ -37,11 +36,13 @@
     
     <!--========BUILD KINECT======-->
     <xacro:include filename="$(find sergio_description)/urdf/xacro/kinect/top_kinect.urdf.xacro" />
-    
-    <!--========BUILD LASER======-->
-    <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/laser.urdf.xacro" />
-    <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/torso_laser.urdf.xacro" />
 
+    <!--========BUILD LASERS======-->
+    <!--<xacro:include filename="$(find sergio_description)/urdf/xacro/laser/base_laser.urdf.xacro" />-->
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/laser.urdf.xacro" />
+    <xacro:laser laser_name="base" laser_parent="laser_mount" laser_xyz="0.03 0.0 0.09" laser_rpy="0.0 0.0 0.0"  />
+    <xacro:laser laser_name="torso" laser_parent="torso_laser_mount" laser_xyz="0.0 0.0 0.0015" laser_rpy="0.0 0.0 0.0"  />
+    
     <!--========BUILD ULTRASONE======-->
     <xacro:include filename="$(find sergio_description)/urdf/xacro/ultrasone/ultrasone.urdf.xacro" />
     

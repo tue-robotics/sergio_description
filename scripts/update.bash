@@ -5,6 +5,12 @@ ROBOT_DESCRIPTION_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 # Generate urdf from xacro
 rosrun xacro xacro.py -o $ROBOT_DESCRIPTION_DIR/urdf/sergio.urdf $ROBOT_DESCRIPTION_DIR/urdf/xacro/sergio.urdf.xacro
 
+# generate pdf documentation file
+urdf_to_graphiz $ROBOT_DESCRIPTION_DIR/urdf/sergio.urdf
+# move to documentation
+mv $ROBOT_DESCRIPTION_DIR/scripts/sergio.pdf $ROBOT_DESCRIPTION_DIR/documentation/sergio.pdf
+rm $ROBOT_DESCRIPTION_DIR/scripts/sergio.gv
+
 # Generate sdf from urdf
 gzsdf print $ROBOT_DESCRIPTION_DIR/urdf/sergio.urdf > $ROBOT_DESCRIPTION_DIR/sdf/sergio.sdf
 
