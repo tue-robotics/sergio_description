@@ -1122,13 +1122,13 @@
     <link name='torso_laser_mount'>
       <pose>0.109801 8.02173e-07 0.128745 3.14 1.57 3.21683e-12</pose>
       <inertial>
-        <pose>0 0 -0.0177981 0 -0 0</pose>
+        <pose>0 0 -0.0285865 0 -0 0</pose>
         <mass>0.52</mass>
         <inertia>
-          <ixx>0.000321781</ixx>
+          <ixx>0.000326884</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.000321781</iyy>
+          <iyy>0.000326884</iyy>
           <iyz>0</iyz>
           <izz>0.0003</izz>
         </inertia>
@@ -1150,7 +1150,7 @@
         </surface>
       </collision>
       <collision name='torso_laser_mount_collision_torso_laser'>
-        <pose>0 0 -0.019 0 -0 0</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.069</size>
@@ -1174,7 +1174,7 @@
         </surface>
       </collision>
       <collision name='torso_laser_mount_collision_torso_lasertop'>
-        <pose>0 0 0.0245 0 -0 0</pose>
+        <pose>0 0 0.0135 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.018</size>
@@ -1224,7 +1224,7 @@
         </material>
       </visual>
       <visual name='torso_laser_mount_visual_torso_laser'>
-        <pose>0 0 -0.019 0 -0 0</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.069</size>
@@ -1238,7 +1238,7 @@
         </material>
       </visual>
       <visual name='torso_laser_mount_visual_torso_lasertop'>
-        <pose>0 0 0.0245 0 -0 0</pose>
+        <pose>0 0 0.0135 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.018</size>

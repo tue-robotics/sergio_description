@@ -40,8 +40,8 @@
     <!--========BUILD LASERS======-->
     <!--<xacro:include filename="$(find sergio_description)/urdf/xacro/laser/base_laser.urdf.xacro" />-->
     <xacro:include filename="$(find sergio_description)/urdf/xacro/laser/laser.urdf.xacro" />
-    <xacro:laser laser_name="base" laser_parent="laser_mount" laser_xyz="0.03 0.0 0.09" laser_rpy="0.0 0.0 0.0"  />
-    <xacro:laser laser_name="torso" laser_parent="torso_laser_mount" laser_xyz="0.0 0.0 0.0015" laser_rpy="0.0 0.0 0.0"  />
+    <xacro:laser laser_name="base" laser_parent="laser_mount" laser_xyz="0.03 0.0 0.0955" laser_rpy="0.0 0.0 0.0"  />
+    <xacro:laser laser_name="torso" laser_parent="torso_laser_mount" laser_xyz="0.0 0.0 -0.004" laser_rpy="0.0 0.0 0.0"  />
 
     
     
