@@ -1120,7 +1120,7 @@
       </axis>
     </joint>
     <link name='torso_laser_mount'>
-      <pose>0.109801 8.02173e-07 0.128745 3.14 1.57 3.21683e-12</pose>
+      <pose>0.109801 8.02173e-07 0.128745 3.14 1.406 2.5244e-06</pose>
       <inertial>
         <pose>0 0 -0.0285865 0 -0 0</pose>
         <mass>0.52</mass>
@@ -1276,10 +1276,10 @@
       <child>torso_laser_mount</child>
       <parent>trunk</parent>
       <axis>
-        <xyz>0.00159519 -0.999999 1.2703e-06</xyz>
+        <xyz>0.00157361 -0.999999 0.000261279</xyz>
         <limit>
-          <lower>-0.3</lower>
-          <upper>0.3</upper>
+          <lower>0</lower>
+          <upper>0.3173</upper>
           <effort>13.4</effort>
           <velocity>1</velocity>
         </limit>
