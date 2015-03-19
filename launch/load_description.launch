@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+    <group ns="sergio">
+
+        <!-- PARAMETERS: desciption, joint groups and specific skills -->
+        <param name="robot_description" textfile="$(find sergio_description)/urdf/sergio.urdf" />
+
+    </group>
+</launch>
