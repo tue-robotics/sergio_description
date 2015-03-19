@@ -14,11 +14,11 @@
     <!--get link & joint definitions -->
     <!--Definitions from default package?-->
     <!--get link & joint definitions -->
-    <!--<xacro:include filename="$(find amigo_robot_model)/description/definitions.xacro" />-->
-    <xacro:include filename="$(find amigo_description)/urdf/xacro/macro_definitions.xacro" />
+    <!--<xacro:include filename="$(find sergio_robot_model)/description/definitions.xacro" />-->
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/macro_definitions.xacro" />
 
     <!--get custom materials -->
-    <xacro:include filename="$(find amigo_description)/urdf/xacro/materials.urdf.xacro" />
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/materials.urdf.xacro" />
     
     <!--========BUILD BASE======-->
     <xacro:include filename="$(find sergio_description)/urdf/xacro/base/base.urdf.xacro" />

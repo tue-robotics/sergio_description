@@ -14,7 +14,7 @@
   <!--get link & joint definitions -->
   <!--Definitions from default package?-->
   <!--get link & joint definitions -->
-  <!--<xacro:include filename="$(find amigo_robot_model)/description/definitions.xacro" />-->
+  <!--<xacro:include filename="$(find sergio_robot_model)/description/definitions.xacro" />-->
   <author>Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
@@ -507,14 +507,14 @@
     <visual>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
       <geometry>
-        <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://sergio_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
       <geometry>
-        <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://sergio_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
@@ -556,14 +556,14 @@
     <visual>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
       <geometry>
-        <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://sergio_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
       <geometry>
-        <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://sergio_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
@@ -1065,14 +1065,14 @@
     <visual>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
       <geometry>
-        <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://sergio_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
       <geometry>
-        <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://sergio_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
@@ -1114,14 +1114,14 @@
     <visual>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
       <geometry>
-        <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://sergio_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
       <geometry>
-        <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://sergio_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
@@ -1689,7 +1689,7 @@
       <geometry>
         <!--<box size="0.001 0.001 0.001"/>-->
         <!--Changed to 0.001 because otherwise it doesn't work-->
-        <!--mesh filename="package://amigo_description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
+        <!--mesh filename="package://sergio_description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
         <mesh filename="package://sergio_description/media/meshes/kinect_without_base.dae"/>
       </geometry>
     </visual>
