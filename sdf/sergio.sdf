@@ -1465,7 +1465,7 @@
         </geometry>
         <material>
           <script>
-            <name>amigo_description/white</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -1603,7 +1603,7 @@
         </geometry>
         <material>
           <script>
-            <name>amigo_description/white</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -2534,7 +2534,7 @@
         </geometry>
         <material>
           <script>
-            <name>amigo_description/white</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -2672,7 +2672,7 @@
         </geometry>
         <material>
           <script>
-            <name>amigo_description/white</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>

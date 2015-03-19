@@ -49,20 +49,20 @@
   <material name="Orange">
     <color rgba="1.0 0.33 0.0 1.0"/>
   </material>
-  <material name="amigo_description/bottomcovers">
-    <texture filename="package://amigo_description/media/materials/textures/bottomcovers/finalreduced.jpg"/>
+  <material name="sergio_description/bottomcovers">
+    <texture filename="package://sergio_description/media/materials/textures/bottomcovers/finalreduced.jpg"/>
   </material>
-  <material name="amigo_description/white">
-    <texture filename="package://amigo_description/media/materials/textures/white/white.jpg"/>
+  <material name="sergio_description/white">
+    <texture filename="package://sergio_description/media/materials/textures/white/white.jpg"/>
   </material>
-  <material name="amigo_description/logo">
-    <texture filename="package://amigo_description/media/materials/textures/logo/tue.jpg"/>
+  <material name="sergio_description/logo">
+    <texture filename="package://sergio_description/media/materials/textures/logo/tue.jpg"/>
   </material>
-  <material name="amigo_description/aluminium">
-    <texture filename="package://amigo_description/media/materials/textures/aluminium/aluminium_0001_c.jpg"/>
+  <material name="sergio_description/aluminium">
+    <texture filename="package://sergio_description/media/materials/textures/aluminium/aluminium_0001_c.jpg"/>
   </material>
-  <material name="amigo_description/orange">
-    <texture filename="package://amigo_description/media/materials/textures/orange/orange.jpg"/>
+  <material name="sergio_description/orange">
+    <texture filename="package://sergio_description/media/materials/textures/orange/orange.jpg"/>
   </material>
   <!--========BUILD BASE======-->
   <author>Janno Lunenburg</author>
@@ -509,7 +509,7 @@
       <geometry>
         <mesh filename="package://sergio_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="amigo_description/white"/>
+      <material name="sergio_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
@@ -519,7 +519,7 @@
     </collision>
   </link>
   <gazebo reference="upper_arm_right">
-    <material>amigo_description/white</material>
+    <material>sergio_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="elbow_link4_right">
@@ -558,7 +558,7 @@
       <geometry>
         <mesh filename="package://sergio_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="amigo_description/white"/>
+      <material name="sergio_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
@@ -568,7 +568,7 @@
     </collision>
   </link>
   <gazebo reference="fore_arm_right">
-    <material>amigo_description/white</material>
+    <material>sergio_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="wrist_link6_right">
@@ -1067,7 +1067,7 @@
       <geometry>
         <mesh filename="package://sergio_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="amigo_description/white"/>
+      <material name="sergio_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
@@ -1077,7 +1077,7 @@
     </collision>
   </link>
   <gazebo reference="upper_arm_left">
-    <material>amigo_description/white</material>
+    <material>sergio_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="elbow_link4_left">
@@ -1116,7 +1116,7 @@
       <geometry>
         <mesh filename="package://sergio_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="amigo_description/white"/>
+      <material name="sergio_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
@@ -1126,7 +1126,7 @@
     </collision>
   </link>
   <gazebo reference="fore_arm_left">
-    <material>amigo_description/white</material>
+    <material>sergio_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="wrist_link6_left">
