@@ -391,7 +391,7 @@
     <origin rpy="0 0 0" xyz="-0.185 0.0 0.0565"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
-    <limit effort="1000" lower="0.05" upper="1.001" velocity="0.265"/>
+    <limit effort="1000" lower="0.152" upper="1.00" velocity="0.265"/>
   </joint>
   <joint name="knee_joint" type="revolute">
     <parent link="lower_rear_leg"/>
@@ -399,7 +399,7 @@
     <origin rpy="3.14 3.14 0.0" xyz="0.390 0.0 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
-    <limit effort="1000" lower="0.18" upper="2.06" velocity="0.539"/>
+    <limit effort="1000" lower="0.419" upper="2.059" velocity="0.539"/>
   </joint>
   <joint name="hip_joint" type="revolute">
     <parent link="upper_leg"/>
@@ -407,7 +407,7 @@
     <origin rpy="3.14 3.14 0.0" xyz="0.4115 0.0 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
-    <limit effort="1000" lower="1.01" upper="2.31" velocity="0.375"/>
+    <limit effort="1000" lower="1.007" upper="2.31" velocity="0.375"/>
   </joint>
   <joint name="laser_tilt_joint" type="revolute">
     <parent link="trunk"/>
