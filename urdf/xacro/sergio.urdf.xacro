@@ -31,6 +31,11 @@
     <xacro:arm whichside="right" sidesign="+1.0" rollsign="+"/>
     <xacro:arm whichside="left"  sidesign="-1.0" rollsign="-"/>
     
+    <!--extra arm visuals-->
+    <xacro:include filename="$(find sergio_description)/urdf/xacro/arms/arm_extra.urdf.xacro" />
+    <xacro:arm_extra whichside="right" sidesign="+1.0" rollsign="+"/>
+    <xacro:arm_extra whichside="left"  sidesign="-1.0" rollsign="-"/>
+    
     <!--========BUILD HEAD======-->
     <xacro:include filename="$(find sergio_description)/urdf/xacro/head/head.urdf.xacro" />
     

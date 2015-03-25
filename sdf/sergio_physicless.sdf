@@ -901,15 +901,15 @@
     <link name='trunk'>
       <pose>-0.206499 -5.29396e-23 0.195845 -2.01992e-09 -2.01992e-09 2.53654e-06</pose>
       <inertial>
-        <pose>0.243359 0 -3.32841e-05 0 -0 0</pose>
-        <mass>10.35</mass>
+        <pose>0.249743 -3.2577e-19 -3.23465e-05 0 -0 0</pose>
+        <mass>10.65</mass>
         <inertia>
-          <ixx>0.0223699</ixx>
-          <ixy>0</ixy>
-          <ixz>0.000107463</ixz>
-          <iyy>0.0420765</iyy>
-          <iyz>-4.81381e-06</iyz>
-          <izz>0.0433416</izz>
+          <ixx>0.0505374</ixx>
+          <ixy>-8.66471e-19</ixy>
+          <ixz>0.000105264</ixz>
+          <iyy>0.0770523</iyy>
+          <iyz>-9.14981e-06</iyz>
+          <izz>0.0864849</izz>
         </inertia>
       </inertial>
       <collision name='trunk_collision'>
@@ -952,11 +952,61 @@
           </friction>
         </surface>
       </collision>
+      <collision name='trunk_collision_pitch_axis_left'>
+        <pose>0.47 0.165 8.75959e-05 -1.57319 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.22</length>
+            <radius>0.035</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='trunk_collision_pitch_axis_right'>
+        <pose>0.47 -0.165 -8.75959e-05 -1.57319 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.22</length>
+            <radius>0.035</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
       <collision name='trunk_collision_shoulder_mount_left'>
         <pose>0.47 0.0650002 0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.14</length>
+            <length>0.16</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -981,7 +1031,7 @@
         <pose>0.47 -0.0650002 -0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.14</length>
+            <length>0.16</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -1036,11 +1086,41 @@
           </script>
         </material>
       </visual>
+      <visual name='trunk_visual_pitch_axis_left'>
+        <pose>0.47 0.165 8.75959e-05 -1.57319 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.22</length>
+            <radius>0.035</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='trunk_visual_pitch_axis_right'>
+        <pose>0.47 -0.165 -8.75959e-05 -1.57319 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.22</length>
+            <radius>0.035</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <visual name='trunk_visual_shoulder_mount_left'>
         <pose>0.47 0.0650002 0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.14</length>
+            <length>0.16</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -1055,7 +1135,7 @@
         <pose>0.47 -0.0650002 -0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.14</length>
+            <length>0.16</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -1066,6 +1146,14 @@
           </script>
         </material>
       </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
@@ -1635,15 +1723,15 @@
     <link name='upper_arm_left'>
       <pose>0.2635 0.220001 0.195845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
-        <pose>0 -0.2 0 0 -0 0</pose>
-        <mass>2.95</mass>
+        <pose>-3.3557e-05 -0.200403 0 0 -0 0</pose>
+        <mass>2.98</mass>
         <inertia>
-          <ixx>0.027</ixx>
-          <ixy>0</ixy>
+          <ixx>0.0563415</ixx>
+          <ixy>1.00403e-05</ixy>
           <ixz>0</ixz>
-          <iyy>0.45993</iyy>
-          <iyz>0</iyz>
-          <izz>0.004</izz>
+          <iyy>0.465931</iyy>
+          <iyz>-8.44837e-08</iyz>
+          <izz>0.0333425</izz>
         </inertia>
       </inertial>
       <collision name='upper_arm_left_collision'>
@@ -1654,6 +1742,80 @@
             <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='upper_arm_left_collision_elbow_extra_block2_left'>
+        <pose>0 -0.31 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.08</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='upper_arm_left_collision_elbow_extra_block_left'>
+        <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.08 0.06</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='upper_arm_left_collision_upper_arm_top_left'>
+        <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.02</length>
+            <radius>0.0561</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
         <surface>
           <contact>
             <ode/>
@@ -1678,6 +1840,62 @@
           </script>
         </material>
       </visual>
+      <visual name='upper_arm_left_visual_elbow_extra_block2_left'>
+        <pose>0 -0.31 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.08</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='upper_arm_left_visual_elbow_extra_block_left'>
+        <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.08 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='upper_arm_left_visual_upper_arm_top_left'>
+        <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.02</length>
+            <radius>0.0561</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
@@ -1773,15 +1991,15 @@
     <link name='fore_arm_left'>
       <pose>-0.0565001 0.219983 0.185846 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
-        <pose>0 -0.14 0 0 -0 0</pose>
-        <mass>0.85</mass>
+        <pose>2.32558e-05 -0.1385 0 0 -0 0</pose>
+        <mass>0.86</mass>
         <inertia>
-          <ixx>0.001</ixx>
-          <ixy>0</ixy>
+          <ixx>0.00656447</ixx>
+          <ixy>-2.55e-06</ixy>
           <ixz>0</ixz>
-          <iyy>0.5</iyy>
-          <iyz>0</iyz>
-          <izz>0.001</izz>
+          <iyy>0.5004</iyy>
+          <iyz>-1.8366e-08</iyz>
+          <izz>0.00656451</izz>
         </inertia>
       </inertial>
       <collision name='fore_arm_left_collision'>
@@ -1792,6 +2010,31 @@
             <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='fore_arm_left_collision_fore_arm_top_left'>
+        <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.037</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
         <surface>
           <contact>
             <ode/>
@@ -1816,6 +2059,25 @@
           </script>
         </material>
       </visual>
+      <visual name='fore_arm_left_visual_fore_arm_top_left'>
+        <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.037</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
@@ -1842,15 +2104,15 @@
     <link name='wrist_link6_left'>
       <pose>-0.3365 0.219966 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
-        <pose>0 0 0 0 -0 0</pose>
-        <mass>0.01</mass>
+        <pose>-0.00666667 0 0 0 -0 0</pose>
+        <mass>0.03</mass>
         <inertia>
-          <ixx>0.001</ixx>
+          <ixx>0.003</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.03322</iyy>
-          <iyz>0</iyz>
-          <izz>0.001</izz>
+          <iyy>0.0352227</iyy>
+          <iyz>4.1359e-25</iyz>
+          <izz>0.00300267</izz>
         </inertia>
       </inertial>
       <collision name='wrist_link6_left_collision'>
@@ -1861,6 +2123,55 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='wrist_link6_left_collision_wrist_to_hand_block_left'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.02 0.038</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='wrist_link6_left_collision_wrist_visual_left'>
+        <pose>-0.02 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.018</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
         <surface>
           <contact>
             <ode/>
@@ -1885,6 +2196,43 @@
           </script>
         </material>
       </visual>
+      <visual name='wrist_link6_left_visual_wrist_to_hand_block_left'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.02 0.038</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='wrist_link6_left_visual_wrist_visual_left'>
+        <pose>-0.02 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.018</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
@@ -2704,15 +3052,15 @@
     <link name='upper_arm_right'>
       <pose>0.263501 -0.219999 0.195845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
-        <pose>0 -0.2 0 0 -0 0</pose>
-        <mass>2.95</mass>
+        <pose>-3.3557e-05 -0.200403 0 0 -0 0</pose>
+        <mass>2.98</mass>
         <inertia>
-          <ixx>0.027</ixx>
-          <ixy>0</ixy>
+          <ixx>0.0563415</ixx>
+          <ixy>1.00403e-05</ixy>
           <ixz>0</ixz>
-          <iyy>0.45993</iyy>
-          <iyz>0</iyz>
-          <izz>0.004</izz>
+          <iyy>0.465931</iyy>
+          <iyz>-8.44837e-08</iyz>
+          <izz>0.0333425</izz>
         </inertia>
       </inertial>
       <collision name='upper_arm_right_collision'>
@@ -2723,6 +3071,80 @@
             <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='upper_arm_right_collision_elbow_extra_block2_right'>
+        <pose>0 -0.31 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.08</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='upper_arm_right_collision_elbow_extra_block_right'>
+        <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.08 0.06</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='upper_arm_right_collision_upper_arm_top_right'>
+        <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.02</length>
+            <radius>0.0561</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
         <surface>
           <contact>
             <ode/>
@@ -2747,6 +3169,62 @@
           </script>
         </material>
       </visual>
+      <visual name='upper_arm_right_visual_elbow_extra_block2_right'>
+        <pose>0 -0.31 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.08</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='upper_arm_right_visual_elbow_extra_block_right'>
+        <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.08 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='upper_arm_right_visual_upper_arm_top_right'>
+        <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.02</length>
+            <radius>0.0561</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
@@ -2842,15 +3320,15 @@
     <link name='fore_arm_right'>
       <pose>-0.056499 -0.220017 0.185846 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
-        <pose>0 -0.14 0 0 -0 0</pose>
-        <mass>0.85</mass>
+        <pose>2.32558e-05 -0.1385 0 0 -0 0</pose>
+        <mass>0.86</mass>
         <inertia>
-          <ixx>0.001</ixx>
-          <ixy>0</ixy>
+          <ixx>0.00656447</ixx>
+          <ixy>-2.55e-06</ixy>
           <ixz>0</ixz>
-          <iyy>0.5</iyy>
-          <iyz>0</iyz>
-          <izz>0.001</izz>
+          <iyy>0.5004</iyy>
+          <iyz>-1.8366e-08</iyz>
+          <izz>0.00656451</izz>
         </inertia>
       </inertial>
       <collision name='fore_arm_right_collision'>
@@ -2861,6 +3339,31 @@
             <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='fore_arm_right_collision_fore_arm_top_right'>
+        <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.037</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
         <surface>
           <contact>
             <ode/>
@@ -2885,6 +3388,25 @@
           </script>
         </material>
       </visual>
+      <visual name='fore_arm_right_visual_fore_arm_top_right'>
+        <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.037</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
@@ -2911,15 +3433,15 @@
     <link name='wrist_link6_right'>
       <pose>-0.336499 -0.220034 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
-        <pose>0 0 0 0 -0 0</pose>
-        <mass>0.01</mass>
+        <pose>-0.00666667 0 0 0 -0 0</pose>
+        <mass>0.03</mass>
         <inertia>
-          <ixx>0.001</ixx>
+          <ixx>0.003</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.03322</iyy>
-          <iyz>0</iyz>
-          <izz>0.001</izz>
+          <iyy>0.0352227</iyy>
+          <iyz>4.1359e-25</iyz>
+          <izz>0.00300267</izz>
         </inertia>
       </inertial>
       <collision name='wrist_link6_right_collision'>
@@ -2930,6 +3452,55 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='wrist_link6_right_collision_wrist_to_hand_block_right'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.02 0.038</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='wrist_link6_right_collision_wrist_visual_right'>
+        <pose>-0.02 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.018</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
         <surface>
           <contact>
             <ode/>
@@ -2954,6 +3525,43 @@
           </script>
         </material>
       </visual>
+      <visual name='wrist_link6_right_visual_wrist_to_hand_block_right'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.02 0.038</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='wrist_link6_right_visual_wrist_visual_right'>
+        <pose>-0.02 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.018</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
