@@ -296,6 +296,138 @@
           </friction>
         </surface>
       </collision>
+      <collision name='base_link_collision_wheel_left_front'>
+        <pose>0.275 0.275 0.075 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.075</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_wheel_left_rear'>
+        <pose>-0.275 0.275 0.075 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.075</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_wheel_right_front'>
+        <pose>0.275 -0.275 0.075 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.075</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_wheel_right_rear'>
+        <pose>-0.275 -0.275 0.075 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.075</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
       <visual name='base_link_visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
@@ -454,6 +586,66 @@
           </script>
         </material>
       </visual>
+      <visual name='base_link_visual_wheel_left_front'>
+        <pose>0.275 0.275 0.075 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.075</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_wheel_left_rear'>
+        <pose>-0.275 0.275 0.075 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.075</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_wheel_right_front'>
+        <pose>0.275 -0.275 0.075 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.075</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_wheel_right_rear'>
+        <pose>-0.275 -0.275 0.075 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.075</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
@@ -521,6 +713,22 @@
         </plugin>
         <pose>0.3295 0 0.23 0 -0 0</pose>
       </sensor>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>

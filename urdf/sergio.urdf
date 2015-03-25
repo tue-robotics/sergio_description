@@ -46,6 +46,9 @@
   <material name="LightGrey">
     <color rgba="0.6 0.6 0.6 1.0"/>
   </material>
+  <material name="DarkGrey">
+    <color rgba="0.25 0.25 0.25 1.0"/>
+  </material>
   <material name="Orange">
     <color rgba="1.0 0.33 0.0 1.0"/>
   </material>
@@ -218,6 +221,106 @@
     <material>Gazebo/White</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
+  <link name="wheel_right_front">
+    <inertial>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+      <material name="DarkGrey">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="wheel_right_front">
+    <material>Gazebo/DarkGrey</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <link name="wheel_left_front">
+    <inertial>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+      <material name="DarkGrey">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="wheel_left_front">
+    <material>Gazebo/DarkGrey</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <link name="wheel_right_rear">
+    <inertial>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+      <material name="DarkGrey">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="wheel_right_rear">
+    <material>Gazebo/DarkGrey</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <link name="wheel_left_rear">
+    <inertial>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+      <material name="DarkGrey">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="wheel_left_rear">
+    <material>Gazebo/DarkGrey</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
   <joint name="base_link_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base"/>
@@ -249,6 +352,26 @@
     <parent link="base"/>
     <child link="laser_mount"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.2995 0.0 0.055"/>
+  </joint>
+  <joint name="wheel_right_front_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_right_front"/>
+    <origin rpy="1.57 0.0 0.0" xyz="0.275 -0.275 0.075"/>
+  </joint>
+  <joint name="wheel_left_front_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_left_front"/>
+    <origin rpy="1.57 0.0 0.0" xyz="0.275 0.275 0.075"/>
+  </joint>
+  <joint name="wheel_right_rear_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_right_rear"/>
+    <origin rpy="1.57 0.0 0.0" xyz="-0.275 -0.275 0.075"/>
+  </joint>
+  <joint name="wheel_left_rear_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_left_rear"/>
+    <origin rpy="1.57 0.0 0.0" xyz="-0.275 0.275 0.075"/>
   </joint>
   <!--========BUILD TORSO======-->
   <author>Rob Janssen, Kris van Tienhoven</author>
