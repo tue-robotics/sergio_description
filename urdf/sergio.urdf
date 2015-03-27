@@ -98,27 +98,26 @@
   </gazebo>
   <link name="base">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.0235 0.0 0.0"/>
+      <origin rpy="0 0 1.57" xyz="-0.295 0.10 -0.14"/>
       <mass value="0.1"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.0235 0.0 0.0"/>
+      <origin rpy="0 0 1.57" xyz="-0.295 0.10 -0.14"/>
       <geometry>
-        <box size="0.713 0.500 0.11"/>
+        <mesh filename="package://sergio_description/media/meshes/Base2.dae" scale="0.01 0.01 0.01"/>
       </geometry>
-      <material name="White">
-     </material>
+      <material name="sergio_description/white"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.0235 0.0 0.0"/>
+      <origin rpy="0 0 1.57" xyz="-0.295 0.10 -0.14"/>
       <geometry>
-        <box size="0.713 0.500 0.11"/>
+        <mesh filename="package://sergio_description/media/meshes/Base2.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="base">
-    <material>Gazebo/White</material>
+    <material>sergio_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="sidepot_left">
@@ -230,7 +229,7 @@
     <visual>
       <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.075"/>
+        <cylinder length="0.055" radius="0.075"/>
       </geometry>
       <material name="DarkGrey">
      </material>
@@ -238,7 +237,7 @@
     <collision>
       <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.075"/>
+        <cylinder length="0.055" radius="0.075"/>
       </geometry>
     </collision>
   </link>
@@ -255,7 +254,7 @@
     <visual>
       <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.075"/>
+        <cylinder length="0.055" radius="0.075"/>
       </geometry>
       <material name="DarkGrey">
      </material>
@@ -263,7 +262,7 @@
     <collision>
       <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.075"/>
+        <cylinder length="0.055" radius="0.075"/>
       </geometry>
     </collision>
   </link>
@@ -280,7 +279,7 @@
     <visual>
       <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.075"/>
+        <cylinder length="0.055" radius="0.075"/>
       </geometry>
       <material name="DarkGrey">
      </material>
@@ -288,7 +287,7 @@
     <collision>
       <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.075"/>
+        <cylinder length="0.055" radius="0.075"/>
       </geometry>
     </collision>
   </link>
@@ -305,7 +304,7 @@
     <visual>
       <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.075"/>
+        <cylinder length="0.055" radius="0.075"/>
       </geometry>
       <material name="DarkGrey">
      </material>
@@ -313,7 +312,7 @@
     <collision>
       <origin rpy="0.0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <cylinder length="0.06" radius="0.075"/>
+        <cylinder length="0.055" radius="0.075"/>
       </geometry>
     </collision>
   </link>
@@ -388,7 +387,7 @@
       <geometry>
         <box size="0.500 0.400 0.05"/>
       </geometry>
-      <material name="White">
+      <material name="Grey">
      </material>
     </visual>
     <collision>
@@ -399,7 +398,7 @@
     </collision>
   </link>
   <gazebo reference="torso_mounting_frame">
-    <material>Gazebo/White</material>
+    <material>Gazebo/Grey</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="lower_rear_leg">
@@ -413,7 +412,7 @@
       <geometry>
         <box size="0.390 0.200 0.05"/>
       </geometry>
-      <material name="White">
+      <material name="Grey">
      </material>
     </visual>
     <collision>
@@ -424,57 +423,105 @@
     </collision>
   </link>
   <gazebo reference="lower_rear_leg">
-    <material>Gazebo/White</material>
+    <material>Gazebo/Grey</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="upper_leg">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.20575 0.0 0.0"/>
+      <origin rpy="0 0 1.57" xyz="0.41575 -0.10 -0.02"/>
       <mass value="5"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0.20575 0.0 0.0"/>
+      <origin rpy="0 0 1.57" xyz="0.41575 -0.10 -0.02"/>
       <geometry>
-        <box size="0.4115 0.200 0.1"/>
+        <mesh filename="package://sergio_description/media/meshes/upper_leg_reduced10000.dae" scale="0.01 0.01 0.01"/>
       </geometry>
-      <material name="White">
-     </material>
+      <material name="sergio_description/white"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.20575 0.0 0.0"/>
+      <origin rpy="0 0 1.57" xyz="0.41575 -0.10 -0.02"/>
       <geometry>
-        <box size="0.4115 0.200 0.1"/>
+        <mesh filename="package://sergio_description/media/meshes/upper_leg_reduced10000.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="upper_leg">
-    <material>Gazebo/White</material>
+    <material>sergio_description/white</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <link name="upper_leg_inside">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.20 0.0 0.0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.20 0.0 0.0"/>
+      <geometry>
+        <box size="0.5115 0.200 0.06"/>
+      </geometry>
+      <material name="Black">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.20 0.0 0.0"/>
+      <geometry>
+        <box size="0.5115 0.200 0.06"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="upper_leg_inside">
+    <material>Gazebo/Black</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="trunk">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.235 0.0 0.0"/>
+      <origin rpy="3.1415 1.72 0" xyz="0.16 -0.12 0.0"/>
       <mass value="10"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="3.1415 1.72 0" xyz="0.16 -0.12 0.0"/>
+      <geometry>
+        <mesh filename="package://sergio_description/media/meshes/torso.dae" scale="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="sergio_description/white"/>
+    </visual>
+    <collision>
+      <origin rpy="3.1415 1.72 0" xyz="0.16 -0.12 0.0"/>
+      <geometry>
+        <mesh filename="package://sergio_description/media/meshes/torso.dae" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="trunk">
+    <material>sergio_description/white</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <link name="trunk_inside">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.235 0.0 0.0"/>
+      <mass value="0.001"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0.235 0.0 0.0"/>
       <geometry>
-        <box size="0.470 0.200 0.15"/>
+        <box size="0.470 0.200 0.075"/>
       </geometry>
-      <material name="White">
+      <material name="Black">
      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.235 0.0 0.0"/>
       <geometry>
-        <box size="0.470 0.200 0.15"/>
+        <box size="0.470 0.200 0.075"/>
       </geometry>
     </collision>
   </link>
-  <gazebo reference="trunk">
-    <material>Gazebo/White</material>
+  <gazebo reference="trunk_inside">
+    <material>Gazebo/Black</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="torso_laser_mount">
@@ -524,6 +571,11 @@
     <dynamics damping="6.0" friction="4.87"/>
     <limit effort="1000" lower="0.419" upper="2.059" velocity="0.539"/>
   </joint>
+  <joint name="upper_leg_inside_joint" type="fixed">
+    <parent link="upper_leg"/>
+    <child link="upper_leg_inside"/>
+    <origin rpy="0 0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
   <joint name="hip_joint" type="revolute">
     <parent link="upper_leg"/>
     <child link="trunk"/>
@@ -531,6 +583,11 @@
     <axis xyz="0 -1 0"/>
     <dynamics damping="6.0" friction="4.87"/>
     <limit effort="1000" lower="1.007" upper="2.31" velocity="0.375"/>
+  </joint>
+  <joint name="trunk_inside_joint" type="fixed">
+    <parent link="trunk"/>
+    <child link="trunk_inside"/>
+    <origin rpy="0 0 0.0" xyz="0.0 0.0 0.0"/>
   </joint>
   <joint name="laser_tilt_joint" type="revolute">
     <parent link="trunk"/>
@@ -555,7 +612,7 @@
     <visual>
       <origin rpy="1.57 0 0 " xyz="0.0 -0.155 0.0"/>
       <geometry>
-        <cylinder length="0.160" radius="0.075"/>
+        <cylinder length="0.210" radius="0.075"/>
       </geometry>
       <material name="White">
      </material>
@@ -563,7 +620,7 @@
     <collision>
       <origin rpy="1.57 0 0 " xyz="0.0 -0.155 0.0"/>
       <geometry>
-        <cylinder length="0.160" radius="0.075"/>
+        <cylinder length="0.210" radius="0.075"/>
       </geometry>
     </collision>
   </link>
@@ -1113,7 +1170,7 @@
     <visual>
       <origin rpy="1.57 0 0 " xyz="0.0 0.155 0.0"/>
       <geometry>
-        <cylinder length="0.160" radius="0.075"/>
+        <cylinder length="0.210" radius="0.075"/>
       </geometry>
       <material name="White">
      </material>
@@ -1121,7 +1178,7 @@
     <collision>
       <origin rpy="1.57 0 0 " xyz="0.0 0.155 0.0"/>
       <geometry>
-        <cylinder length="0.160" radius="0.075"/>
+        <cylinder length="0.210" radius="0.075"/>
       </geometry>
     </collision>
   </link>

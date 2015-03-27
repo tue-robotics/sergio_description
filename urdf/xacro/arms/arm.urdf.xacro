@@ -20,7 +20,7 @@ it has to be reversable and xml cannot multiply - or + but can multiply
 
 <!--the end of the clavicle, yaw rotation-->
 <xacro:my_link name="shoulder_mount_${whichside}" mass="0.15" color="White">
-   <cylinder radius="0.075" length="0.160" /><!-- Length of tube should be correct (see report), origin depends on placement -->
+   <cylinder radius="0.075" length="0.210" /><!-- Length of tube should be correct (see report), origin depends on placement -->
    <origin xyz="0.0 ${sidesign*-0.155} 0.0" rpy="1.57 0 0"/>
    <origin xyz="0.0 ${sidesign*-0.155} 0.0" rpy="1.57 0 0 " />
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" /> <!-- 0.45993-->

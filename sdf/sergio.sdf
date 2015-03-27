@@ -3,15 +3,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.183413 -3.77114e-18 0.163973 0 -0 0</pose>
+        <pose>0.153902 0.0108696 0.148755 0 -0 0</pose>
         <mass>0.92</mass>
         <inertia>
-          <ixx>0.0230513</ixx>
-          <ixy>-6.36342e-19</ixy>
-          <ixz>-0.00795982</ixz>
-          <iyy>0.0326913</iyy>
-          <iyz>-2.73992e-19</iyz>
-          <izz>0.0454683</izz>
+          <ixx>0.0279008</ixx>
+          <ixy>0.00448902</ixy>
+          <ixz>-0.0163886</ixz>
+          <iyy>0.0544549</iyy>
+          <iyz>0.00203755</iyz>
+          <izz>0.0641649</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -40,11 +40,12 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base'>
-        <pose>-0.0235 0 0.085 0 -0 0</pose>
+        <pose>-0.295 0.1 -0.055 0 -0 1.57</pose>
         <geometry>
-          <box>
-            <size>0.713 0.5 0.11</size>
-          </box>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>model://media/meshes/Base2.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
@@ -300,7 +301,7 @@
         <pose>0.275 0.275 0.075 1.57 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.06</length>
+            <length>0.055</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -333,7 +334,7 @@
         <pose>-0.275 0.275 0.075 1.57 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.06</length>
+            <length>0.055</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -366,7 +367,7 @@
         <pose>0.275 -0.275 0.075 1.57 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.06</length>
+            <length>0.055</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -399,7 +400,7 @@
         <pose>-0.275 -0.275 0.075 1.57 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.06</length>
+            <length>0.055</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -444,21 +445,22 @@
         </material>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
       </visual>
       <visual name='base_link_visual_base'>
-        <pose>-0.0235 0 0.085 0 -0 0</pose>
+        <pose>-0.295 0.1 -0.055 0 -0 1.57</pose>
         <geometry>
-          <box>
-            <size>0.713 0.5 0.11</size>
-          </box>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>model://media/meshes/Base2.dae</uri>
+          </mesh>
         </geometry>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -472,7 +474,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -492,7 +494,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -519,7 +521,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -581,7 +583,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>Gazebo/Grey</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -590,7 +592,7 @@
         <pose>0.275 0.275 0.075 1.57 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.06</length>
+            <length>0.055</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -605,7 +607,7 @@
         <pose>-0.275 0.275 0.075 1.57 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.06</length>
+            <length>0.055</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -620,7 +622,7 @@
         <pose>0.275 -0.275 0.075 1.57 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.06</length>
+            <length>0.055</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -635,7 +637,7 @@
         <pose>-0.275 -0.275 0.075 1.57 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.06</length>
+            <length>0.055</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -803,7 +805,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>Gazebo/Grey</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -834,23 +836,24 @@
     <link name='upper_leg'>
       <pose>0.205 0 0.1965 -0.00159265 0.00159265 3.14159</pose>
       <inertial>
-        <pose>0.20575 0 0 0 -0 0</pose>
-        <mass>5</mass>
+        <pose>0.415707 -0.09998 -0.019996 0 -0 1.57</pose>
+        <mass>5.001</mass>
         <inertia>
-          <ixx>0.001</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.001</iyy>
-          <iyz>0</iyz>
-          <izz>0.001</izz>
+          <ixx>0.00204697</ixx>
+          <ixy>-2.15416e-05</ixy>
+          <ixz>-1.99616e-06</ixz>
+          <iyy>0.00201036</iyy>
+          <iyz>-4.31573e-06</iyz>
+          <izz>0.00205654</izz>
         </inertia>
       </inertial>
       <collision name='upper_leg_collision'>
-        <pose>0.20575 0 0 0 -0 0</pose>
+        <pose>0.41575 -0.1 -0.02 0 -0 1.57</pose>
         <geometry>
-          <box>
-            <size>0.4115 0.2 0.1</size>
-          </box>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>model://media/meshes/upper_leg_reduced10000.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
@@ -861,20 +864,69 @@
           </friction>
         </surface>
       </collision>
-      <visual name='upper_leg_visual'>
-        <pose>0.20575 0 0 0 -0 0</pose>
+      <collision name='upper_leg_collision_upper_leg_inside'>
+        <pose>0.2 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.4115 0.2 0.1</size>
+            <size>0.5115 0.2 0.06</size>
           </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='upper_leg_visual'>
+        <pose>0.41575 -0.1 -0.02 0 -0 1.57</pose>
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>model://media/meshes/upper_leg_reduced10000.dae</uri>
+          </mesh>
         </geometry>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
       </visual>
+      <visual name='upper_leg_visual_upper_leg_inside'>
+        <pose>0.2 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.5115 0.2 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>sergio_description/white</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
@@ -901,23 +953,24 @@
     <link name='trunk'>
       <pose>-0.206499 -5.29396e-23 0.195845 -2.01992e-09 -2.01992e-09 2.53654e-06</pose>
       <inertial>
-        <pose>0.249743 -3.2577e-19 -3.23465e-05 0 -0 0</pose>
-        <mass>10.65</mass>
+        <pose>0.179326 -0.112665 -3.23435e-05 -9.26536e-05 1.42159 3.14159</pose>
+        <mass>10.651</mass>
         <inertia>
-          <ixx>0.0505374</ixx>
-          <ixy>-8.66471e-19</ixy>
-          <ixz>0.000105264</ixz>
-          <iyy>0.0770523</iyy>
-          <iyz>-9.14981e-06</iyz>
-          <izz>0.0864849</izz>
+          <ixx>0.120517</ixx>
+          <ixy>-0.00341721</ixy>
+          <ixz>-0.00891675</ixz>
+          <iyy>0.103608</iyy>
+          <iyz>-0.022934</iyz>
+          <izz>0.0616554</izz>
         </inertia>
       </inertial>
       <collision name='trunk_collision'>
-        <pose>0.235 0 0 0 -0 0</pose>
+        <pose>0.16 -0.12 0 -9.26536e-05 1.42159 3.14159</pose>
         <geometry>
-          <box>
-            <size>0.47 0.2 0.15</size>
-          </box>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>model://media/meshes/torso.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <contact>
@@ -1006,7 +1059,7 @@
         <pose>0.47 0.0650002 0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.16</length>
+            <length>0.21</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -1031,7 +1084,7 @@
         <pose>0.47 -0.0650002 -0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.16</length>
+            <length>0.21</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -1052,16 +1105,41 @@
           </friction>
         </surface>
       </collision>
-      <visual name='trunk_visual'>
+      <collision name='trunk_collision_trunk_inside'>
         <pose>0.235 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.47 0.2 0.15</size>
+            <size>0.47 0.2 0.075</size>
           </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='trunk_visual'>
+        <pose>0.16 -0.12 0 -9.26536e-05 1.42159 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.01 0.01 0.01</scale>
+            <uri>model://media/meshes/torso.dae</uri>
+          </mesh>
         </geometry>
         <material>
           <script>
-            <name>Gazebo/White</name>
+            <name>sergio_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -1120,7 +1198,7 @@
         <pose>0.47 0.0650002 0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.16</length>
+            <length>0.21</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -1135,7 +1213,7 @@
         <pose>0.47 -0.0650002 -0.000246861 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.16</length>
+            <length>0.21</length>
             <radius>0.075</radius>
           </cylinder>
         </geometry>
@@ -1146,6 +1224,30 @@
           </script>
         </material>
       </visual>
+      <visual name='trunk_visual_trunk_inside'>
+        <pose>0.235 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.47 0.2 0.075</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>sergio_description/white</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
