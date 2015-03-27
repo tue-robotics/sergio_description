@@ -477,19 +477,19 @@
   </gazebo>
   <link name="trunk">
     <inertial>
-      <origin rpy="3.1415 1.72 0" xyz="0.16 -0.12 0.0"/>
+      <origin rpy="3.1415 1.73 0" xyz="0.16 -0.11 0.0"/>
       <mass value="10"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
-      <origin rpy="3.1415 1.72 0" xyz="0.16 -0.12 0.0"/>
+      <origin rpy="3.1415 1.73 0" xyz="0.16 -0.11 0.0"/>
       <geometry>
         <mesh filename="package://sergio_description/media/meshes/torso.dae" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="sergio_description/white"/>
     </visual>
     <collision>
-      <origin rpy="3.1415 1.72 0" xyz="0.16 -0.12 0.0"/>
+      <origin rpy="3.1415 1.73 0" xyz="0.16 -0.11 0.0"/>
       <geometry>
         <mesh filename="package://sergio_description/media/meshes/torso.dae" scale="0.01 0.01 0.01"/>
       </geometry>
@@ -612,7 +612,7 @@
     <visual>
       <origin rpy="1.57 0 0 " xyz="0.0 -0.155 0.0"/>
       <geometry>
-        <cylinder length="0.210" radius="0.075"/>
+        <cylinder length="0.190" radius="0.075"/>
       </geometry>
       <material name="White">
      </material>
@@ -620,7 +620,7 @@
     <collision>
       <origin rpy="1.57 0 0 " xyz="0.0 -0.155 0.0"/>
       <geometry>
-        <cylinder length="0.210" radius="0.075"/>
+        <cylinder length="0.190" radius="0.075"/>
       </geometry>
     </collision>
   </link>
@@ -1170,7 +1170,7 @@
     <visual>
       <origin rpy="1.57 0 0 " xyz="0.0 0.155 0.0"/>
       <geometry>
-        <cylinder length="0.210" radius="0.075"/>
+        <cylinder length="0.190" radius="0.075"/>
       </geometry>
       <material name="White">
      </material>
@@ -1178,7 +1178,7 @@
     <collision>
       <origin rpy="1.57 0 0 " xyz="0.0 0.155 0.0"/>
       <geometry>
-        <cylinder length="0.210" radius="0.075"/>
+        <cylinder length="0.190" radius="0.075"/>
       </geometry>
     </collision>
   </link>
@@ -2362,7 +2362,7 @@
   <joint name="base_lasercenter_joint" type="fixed">
     <parent link="laser_mount"/>
     <child link="base_laser"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.03 0.0 0.0955"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.03 0.0 0.0455"/>
   </joint>
   <link name="base_laser">
     <inertial>
@@ -2420,6 +2420,7 @@
     <material>Gazebo/Orange</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
+  <!-- Moved laser down for the looks -->
   <joint name="torso_lasercenter_joint" type="fixed">
     <parent link="torso_laser_mount"/>
     <child link="torso_laser"/>
