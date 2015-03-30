@@ -3,15 +3,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.153902 0.0108696 0.121038 0 -0 0</pose>
-        <mass>0.92</mass>
+        <pose>0.138814 0.0326961 0.128191 0 -0 0</pose>
+        <mass>1.02</mass>
         <inertia>
-          <ixx>0.0253275</ixx>
-          <ixy>0.00448902</ixy>
-          <ixz>-0.0119108</ixz>
-          <iyy>0.0518816</iyy>
-          <iyz>0.00176038</iyz>
-          <izz>0.0641649</izz>
+          <ixx>0.0312782</ixx>
+          <ixy>0.00757944</ixy>
+          <ixz>-0.010898</ixz>
+          <iyy>0.0554981</iyy>
+          <iyz>0.000295276</iyz>
+          <izz>0.0717718</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -143,6 +143,38 @@
             <length>0</length>
             <radius>0</radius>
           </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_batteries'>
+        <pose>0 0.2335 0.194 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.332 0.117 0.08</size>
+          </box>
         </geometry>
         <surface>
           <contact>
@@ -532,6 +564,20 @@
           </script>
         </material>
       </visual>
+      <visual name='base_link_visual_batteries'>
+        <pose>0 0.2335 0.194 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.332 0.117 0.08</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <visual name='base_link_visual_laser_mount'>
         <pose>0.3045 0 0.1575 0 -0 0</pose>
         <geometry>
@@ -715,6 +761,10 @@
         </plugin>
         <pose>0.3295 0 0.23 0 -0 0</pose>
       </sensor>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
