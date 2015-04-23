@@ -3,14 +3,14 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.183413 -3.77114e-18 0.163973 0 -0 0</pose>
+        <pose>0.183413 -3.77114e-18 0.169408 0 -0 0</pose>
         <mass>0.92</mass>
         <inertia>
-          <ixx>0.0230513</ixx>
+          <ixx>0.0232844</ixx>
           <ixy>-6.36342e-19</ixy>
-          <ixz>-0.00795982</ixz>
-          <iyy>0.0326913</iyy>
-          <iyz>-2.73992e-19</iyz>
+          <ixz>-0.00704276</ixz>
+          <iyy>0.0329244</iyy>
+          <iyz>-2.92848e-19</iyz>
           <izz>0.0454683</izz>
         </inertia>
       </inertial>
@@ -265,7 +265,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_torso_mounting_frame'>
-        <pose>0 0 0.165 0 -0 0</pose>
+        <pose>0 0 0.215 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.5 0.4 0.05</size>
@@ -441,7 +441,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_torso_mounting_frame'>
-        <pose>0 0 0.165 0 -0 0</pose>
+        <pose>0 0 0.215 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.5 0.4 0.05</size>
@@ -557,7 +557,7 @@
       <self_collide>0</self_collide>
     </link>
     <link name='lower_rear_leg'>
-      <pose>-0.185 0 0.1965 0 -0 0</pose>
+      <pose>-0.185 0 0.2465 0 -0 0</pose>
       <inertial>
         <pose>0.195 0 0 0 -0 0</pose>
         <mass>5</mass>
@@ -624,7 +624,7 @@
       </axis>
     </joint>
     <link name='upper_leg'>
-      <pose>0.205 0 0.1965 -0.00159265 0.00159265 3.14159</pose>
+      <pose>0.205 0 0.2465 -0.00159265 0.00159265 3.14159</pose>
       <inertial>
         <pose>0.20575 0 0 0 -0 0</pose>
         <mass>5</mass>
@@ -691,7 +691,7 @@
       </axis>
     </joint>
     <link name='trunk'>
-      <pose>-0.206499 -5.29396e-23 0.195845 -2.01992e-09 -2.01992e-09 2.53654e-06</pose>
+      <pose>-0.206499 -5.29396e-23 0.245845 -2.01992e-09 -2.01992e-09 2.53654e-06</pose>
       <inertial>
         <pose>0.243359 0 -3.32841e-05 0 -0 0</pose>
         <mass>10.35</mass>
@@ -894,7 +894,7 @@
       </axis>
     </joint>
     <link name='neck_pan'>
-      <pose>0.399201 1.53636e-06 0.185675 -3.11872 1.50577 -3.11708</pose>
+      <pose>0.399201 1.53636e-06 0.235675 -3.11872 1.50577 -3.11708</pose>
       <inertial>
         <pose>0 0 -0.01 0 -0 0</pose>
         <mass>0.05</mass>
@@ -963,7 +963,7 @@
       </axis>
     </joint>
     <link name='neck_tilt'>
-      <pose>0.399201 1.53636e-06 0.185675 -3.11872 1.50577 -3.11708</pose>
+      <pose>0.399201 1.53636e-06 0.235675 -3.11872 1.50577 -3.11708</pose>
       <inertial>
         <pose>0.00945205 0.00257534 0.0290274 0 -0 0</pose>
         <mass>0.073</mass>
@@ -1120,7 +1120,7 @@
       </axis>
     </joint>
     <link name='torso_laser_mount'>
-      <pose>0.109801 8.02173e-07 0.128745 3.14 1.406 2.5244e-06</pose>
+      <pose>0.109801 8.02173e-07 0.178745 3.14 1.406 2.5244e-06</pose>
       <inertial>
         <pose>0 0 -0.0285865 0 -0 0</pose>
         <mass>0.52</mass>
@@ -1289,7 +1289,7 @@
       </axis>
     </joint>
     <link name='shoulder_link1_left'>
-      <pose>0.2635 0.220001 0.195845 -0.00230874 1.5692 -1.5731</pose>
+      <pose>0.2635 0.220001 0.245845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.25</mass>
@@ -1358,7 +1358,7 @@
       </axis>
     </joint>
     <link name='shoulder_link2_left'>
-      <pose>0.2635 0.220001 0.195845 -1.57311 1.5692 -1.5731</pose>
+      <pose>0.2635 0.220001 0.245845 -1.57311 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.15</mass>
@@ -1425,7 +1425,7 @@
       </axis>
     </joint>
     <link name='upper_arm_left'>
-      <pose>0.2635 0.220001 0.195845 -0.00230874 1.5692 -1.5731</pose>
+      <pose>0.2635 0.220001 0.245845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 -0.2 0 0 -0 0</pose>
         <mass>2.95</mass>
@@ -1494,7 +1494,7 @@
       </axis>
     </joint>
     <link name='elbow_link4_left'>
-      <pose>-0.0565001 0.219983 0.185846 -1.57311 1.5692 -1.5731</pose>
+      <pose>-0.0565001 0.219983 0.235846 -1.57311 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.1</mass>
@@ -1563,7 +1563,7 @@
       </axis>
     </joint>
     <link name='fore_arm_left'>
-      <pose>-0.0565001 0.219983 0.185846 -0.00230874 1.5692 -1.5731</pose>
+      <pose>-0.0565001 0.219983 0.235846 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 -0.14 0 0 -0 0</pose>
         <mass>0.85</mass>
@@ -1632,7 +1632,7 @@
       </axis>
     </joint>
     <link name='wrist_link6_left'>
-      <pose>-0.3365 0.219966 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
+      <pose>-0.3365 0.219966 0.225847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.01</mass>
@@ -1701,7 +1701,7 @@
       </axis>
     </joint>
     <link name='hand_left'>
-      <pose>-0.3365 0.219966 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
+      <pose>-0.3365 0.219966 0.225847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
         <pose>0.047619 0 0 0 -0 0</pose>
         <mass>0.21</mass>
@@ -1810,7 +1810,7 @@
       </axis>
     </joint>
     <link name='finger1_left'>
-      <pose>-0.4115 0.239965 0.175816 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.4115 0.239965 0.225816 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -1947,7 +1947,7 @@
       </axis>
     </joint>
     <link name='finger1_tip_left'>
-      <pose>-0.4715 0.239965 0.175864 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.4715 0.239965 0.225864 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -2084,7 +2084,7 @@
       </axis>
     </joint>
     <link name='finger2_left'>
-      <pose>-0.4115 0.199965 0.175879 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.4115 0.199965 0.225879 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -2221,7 +2221,7 @@
       </axis>
     </joint>
     <link name='finger2_tip_left'>
-      <pose>-0.4715 0.199965 0.175927 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.4715 0.199965 0.225927 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -2358,7 +2358,7 @@
       </axis>
     </joint>
     <link name='shoulder_link1_right'>
-      <pose>0.263501 -0.219999 0.195845 -0.00230874 1.5692 -1.5731</pose>
+      <pose>0.263501 -0.219999 0.245845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.25</mass>
@@ -2427,7 +2427,7 @@
       </axis>
     </joint>
     <link name='shoulder_link2_right'>
-      <pose>0.263501 -0.219999 0.195845 -1.57311 1.5692 -1.5731</pose>
+      <pose>0.263501 -0.219999 0.245845 -1.57311 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.15</mass>
@@ -2494,7 +2494,7 @@
       </axis>
     </joint>
     <link name='upper_arm_right'>
-      <pose>0.263501 -0.219999 0.195845 -0.00230874 1.5692 -1.5731</pose>
+      <pose>0.263501 -0.219999 0.245845 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 -0.2 0 0 -0 0</pose>
         <mass>2.95</mass>
@@ -2563,7 +2563,7 @@
       </axis>
     </joint>
     <link name='elbow_link4_right'>
-      <pose>-0.056499 -0.220017 0.185846 -1.57311 1.5692 -1.5731</pose>
+      <pose>-0.056499 -0.220017 0.235846 -1.57311 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.1</mass>
@@ -2632,7 +2632,7 @@
       </axis>
     </joint>
     <link name='fore_arm_right'>
-      <pose>-0.056499 -0.220017 0.185846 -0.00230874 1.5692 -1.5731</pose>
+      <pose>-0.056499 -0.220017 0.235846 -0.00230874 1.5692 -1.5731</pose>
       <inertial>
         <pose>0 -0.14 0 0 -0 0</pose>
         <mass>0.85</mass>
@@ -2701,7 +2701,7 @@
       </axis>
     </joint>
     <link name='wrist_link6_right'>
-      <pose>-0.336499 -0.220034 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
+      <pose>-0.336499 -0.220034 0.225847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.01</mass>
@@ -2770,7 +2770,7 @@
       </axis>
     </joint>
     <link name='hand_right'>
-      <pose>-0.336499 -0.220034 0.175847 -3.14 -7.35023e-06 -3.14159</pose>
+      <pose>-0.336499 -0.220034 0.225847 -3.14 -7.35023e-06 -3.14159</pose>
       <inertial>
         <pose>0.047619 0 0 0 -0 0</pose>
         <mass>0.21</mass>
@@ -2879,7 +2879,7 @@
       </axis>
     </joint>
     <link name='finger1_right'>
-      <pose>-0.411499 -0.200035 0.175816 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.411499 -0.200035 0.225816 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -3016,7 +3016,7 @@
       </axis>
     </joint>
     <link name='finger1_tip_right'>
-      <pose>-0.471499 -0.200035 0.175864 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.471499 -0.200035 0.225864 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -3153,7 +3153,7 @@
       </axis>
     </joint>
     <link name='finger2_right'>
-      <pose>-0.411499 -0.240035 0.175879 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.411499 -0.240035 0.225879 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
@@ -3290,7 +3290,7 @@
       </axis>
     </joint>
     <link name='finger2_tip_right'>
-      <pose>-0.471499 -0.240035 0.175927 -2.03906 1.56902 -2.03905</pose>
+      <pose>-0.471499 -0.240035 0.225927 -2.03906 1.56902 -2.03905</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
