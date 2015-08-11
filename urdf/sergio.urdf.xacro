@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="sergio">
+       
+    <author>Janno Lunenburg</author>
+    <license>BSD</license>
+    <review status="unreviewed" notes=""/>
+    
+    <!-- ToDo: In general: look at DH conventions-->
+   
+    <!--get link & joint definitions -->
+    <!--Definitions from default package?-->
+    <!--get link & joint definitions -->
+    <!--<xacro:include filename="$(find sergio_robot_model)/description/definitions.xacro" />-->
+    <xacro:include filename="$(find sergio_description)/urdf/macro_definitions.xacro" />
+
+    <!--get custom materials -->
+    <xacro:include filename="$(find sergio_description)/urdf/materials.urdf.xacro" />
+    
+    <!--========BUILD BASE======-->
+    <xacro:include filename="$(find sergio_description)/urdf/base/base.urdf.xacro" />
+    
+    <!--========BUILD TORSO======-->
+    <xacro:include filename="$(find sergio_description)/urdf/torso/torso.urdf.xacro" />
+    
+    <!--========BUILD ARMS======-->
+    <xacro:include filename="$(find sergio_description)/urdf/arms/arm.urdf.xacro" />
+    <xacro:arm whichside="right" sidesign="+1.0" rollsign="+"/>
+    <xacro:arm whichside="left"  sidesign="-1.0" rollsign="-"/>
+    
+    <!--========BUILD HEAD======-->
+    <xacro:include filename="$(find sergio_description)/urdf/head/head.urdf.xacro" />
+    
+    <!--========BUILD KINECT======-->
+    <xacro:include filename="$(find sergio_description)/urdf/kinect/top_kinect.urdf.xacro" />
+
+    <!--========BUILD LASERS======-->
+    <!--<xacro:include filename="$(find sergio_description)/urdf/laser/base_laser.urdf.xacro" />-->
+    <xacro:include filename="$(find sergio_description)/urdf/laser/laser.urdf.xacro" />
+    <xacro:laser laser_name="base" laser_parent="laser_mount" laser_xyz="0.03 0.0 0.0955" laser_rpy="0.0 0.0 0.0"  />
+    <xacro:laser laser_name="torso" laser_parent="torso_laser_mount" laser_xyz="0.0 0.0 -0.004" laser_rpy="0.0 0.0 0.0"  />
+
+</robot>
