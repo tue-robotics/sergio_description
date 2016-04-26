@@ -37,7 +37,8 @@
     <!--========BUILD LASERS======-->
     <!--<xacro:include filename="$(find sergio_description)/urdf/laser/base_laser.urdf.xacro" />-->
     <xacro:include filename="$(find sergio_description)/urdf/laser/laser.urdf.xacro" />
-    <xacro:laser laser_name="base" laser_parent="laser_mount" laser_xyz="0.03 0.0 0.0955" laser_rpy="0.0 0.0 0.0"  />
+    <xacro:laser laser_name="base" laser_parent="laser_mount" laser_xyz="0.03 0.0 0.078" laser_rpy="0.0 0.0 0.0"  />
+    <xacro:laser laser_name="back" laser_parent="back_laser_mount" laser_xyz="0.0 0.0 0.0" laser_rpy="0.0 0.0 3.141592653589793"  />
     <xacro:laser laser_name="torso" laser_parent="torso_laser_mount" laser_xyz="0.0 0.0 -0.004" laser_rpy="0.0 0.0 0.0"  />
 
 </robot>
