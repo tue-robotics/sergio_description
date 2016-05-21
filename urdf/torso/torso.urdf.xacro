@@ -80,7 +80,7 @@
     <joint name="laser_tilt_joint" type="revolute" >
 	   <parent link="trunk" />
 	   <child link="torso_laser_mount"/>
-	   <origin xyz="0.3163 0.0 -0.0671" rpy="3.14 1.406 0.0 "/>
+	   <origin xyz="0.3073 0.0 -0.0871" rpy="3.14 1.406 0.0 "/>
 	   <dynamics damping="0.1" friction="0"/><!--ToDo: update-->
 	   <axis xyz="0 1 0"/>
 	   <limit effort="13.4" velocity="1.0" lower="0.0" upper="0.324" /> <!--ToDo: update-->
