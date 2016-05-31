@@ -95,13 +95,13 @@
     <joint name="laser_mount_joint" type="fixed">
         <parent link="base"/>
         <child link="laser_mount"/>
-        <origin xyz="0.2995 0.0 0.055" rpy="3.141592653589793 0.0 0.0"/>
+        <origin xyz="0.2995 0.0 0.05" rpy="3.141592653589793 0.0 0.0"/>
     </joint>
 
     <joint name="back_laser_mount_joint" type="fixed">
         <parent link="base"/>
         <child link="back_laser_mount"/>
-        <origin xyz="-0.285 0.0 0.27" rpy="0.0 0.0 0.0"/>
+        <origin xyz="-0.20 0.0 0.291" rpy="0.0 0.0 0.0"/>
     </joint>
     
 </robot>
