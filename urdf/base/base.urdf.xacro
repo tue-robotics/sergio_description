@@ -18,25 +18,32 @@
         <!--box size="0.713 0.500 0.11" /--><!--ToDo: check dimensions, adjust height-->
         
         <!-- Large box for better self-filtering -->
-        <box size="0.713 0.650 0.3" />
+        <box size="0.73 0.650 0.14" />
         
-        <origin xyz="-0.0235 0.0 0.0" rpy="0 0 0"/>
-        <origin xyz="-0.0235 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="-0.02 0.0 -0.015" rpy="0 0 0"/>
+        <origin xyz="-0.02 0.0 -0.015" rpy="0 0 0"/>
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
     </xacro:my_link>    
     
     <!-- side pots -->
     <xacro:my_link name="sidepot_left" mass="0.1" color="White"><!--ToDo: estimate mass-->
-        <box size="0.400 0.0615 0.1" /><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <box size="0.43 0.165 0.13" /><!--ToDo: check dimensions, adjust height-->
+        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
     </xacro:my_link>
     
     <xacro:my_link name="sidepot_right" mass="0.1" color="White"><!--ToDo: estimate mass-->
-        <box size="0.400 0.0615 0.1" /><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <box size="0.43 0.165 0.13" /><!--ToDo: check dimensions, adjust height-->
+        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
+    </xacro:my_link>
+    
+    <xacro:my_link name="sidepot_back" mass="0.1" color="White"><!--ToDo: estimate mass-->
+        <box size="0.16 0.65 0.13" /><!--ToDo: check dimensions, adjust height-->
+        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
     </xacro:my_link>
     
@@ -58,9 +65,9 @@
 
     <!-- base - back laser interface -->
     <xacro:my_link name="back_laser_mount" mass="0.01" color="White">
-       <box size="0.01 0.06 0.03" />
-       <origin xyz="0.005 0.0 0.0175" rpy="0 0 0"/>
-       <origin xyz="0.005 0.0 0.0175" rpy="0 0 0"/>
+       <box size="0.06 0.28 0.01" />
+       <origin xyz="0.0 0.0 -0.005" rpy="0 0 0"/>
+       <origin xyz="0.0 0.0 -0.005" rpy="0 0 0"/>
        <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
     </xacro:my_link>
     
@@ -76,32 +83,39 @@
         <parent link="base"/>
         <child link="sidepot_left"/>
         <axis xyz="1 0 0"/>
-        <origin xyz="0.0 0.28075 0.0" rpy="0 0 0"/><!--ToDO: adjust distance-->
+        <origin xyz="-0.01 0.2425 0.045" rpy="0 0 0"/><!--ToDO: adjust distance-->
     </joint>
     
     <joint name="sidepot_right_joint" type="fixed">
         <parent link="base"/>
         <child link="sidepot_right"/>
         <axis xyz="1 0 0"/>
-        <origin xyz="0.0 -0.28075 0.0" rpy="0 0 0"/><!--ToDO: adjust distance-->
+        <origin xyz="-0.01 -0.2425 0.045" rpy="0 0 0"/><!--ToDO: adjust distance-->
+    </joint>
+    
+    <joint name="sidepot_back_joint" type="fixed">
+        <parent link="base"/>
+        <child link="sidepot_back"/>
+        <axis xyz="1 0 0"/>
+        <origin xyz="-0.305 0.0 0.045" rpy="0 0 0"/><!--ToDO: adjust distance-->
     </joint>
     
     <joint name="base_mount_joint" type="fixed">
         <parent link="base"/>
         <child link="base_torso_mount"/>
-        <origin xyz="0.0 0.0 0.055" rpy="0 0 0.0"/><!--ToDo: adjust height-->
+        <origin xyz="0.0 0.0 0.01" rpy="0 0 0.0"/><!--ToDo: adjust height 12-11-16 Matthijs: -4.5cm -->
     </joint>
 
     <joint name="laser_mount_joint" type="fixed">
         <parent link="base"/>
         <child link="laser_mount"/>
-        <origin xyz="0.2995 0.0 0.05" rpy="3.141592653589793 0.0 0.0"/>
+        <origin xyz="0.2995 0.0 0.039" rpy="3.141592653589793 0.0 0.0"/>
     </joint>
 
     <joint name="back_laser_mount_joint" type="fixed">
         <parent link="base"/>
         <child link="back_laser_mount"/>
-        <origin xyz="-0.20 0.0 0.206" rpy="0.0 0.0 0.0"/>
+        <origin xyz="-0.293 0.0 0.157" rpy="0.0 0.0 0.0"/>
     </joint>
     
 </robot>
