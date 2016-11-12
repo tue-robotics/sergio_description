@@ -5,6 +5,8 @@
     <author>Janno Lunenburg</author>
     <license>BSD</license>
     <review status="unreviewed" notes=""/>
+
+    <xacro:property name="prefix" value="sergio/" scope="parent | global"/>
     
     <!-- ToDo: In general: look at DH conventions-->
    
@@ -25,8 +27,8 @@
     
     <!--========BUILD ARMS======-->
     <xacro:include filename="$(find sergio_description)/urdf/arms/arm.urdf.xacro" />
-    <xacro:arm whichside="right" sidesign="+1.0" rollsign="+"/>
-    <xacro:arm whichside="left"  sidesign="-1.0" rollsign="-"/>
+    <xacro:arm whichside="right" sidesign="1" rollsign="+"/>
+    <xacro:arm whichside="left"  sidesign="-1" rollsign="-"/>
     
     <!--========BUILD HEAD======-->
     <xacro:include filename="$(find sergio_description)/urdf/head/head.urdf.xacro" />
