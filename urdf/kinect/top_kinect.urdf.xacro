@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <property name="M_PI" value="3.14159"/>
+  <xacro:property name="M_PI" value="3.14159"/>
     
   <joint name="top_kinect/base_kinect_joint" type="fixed">
     <origin xyz="0.03 0.0 0.017" rpy="0 0 0" /> <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
