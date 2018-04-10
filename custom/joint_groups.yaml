@@ -50,9 +50,9 @@ robot_joint_groups:
           - hip_joint
       parameter_file_package: "sergio_controller_configuration_gazebo"
       parameter_file_path: "/parameters/torso_controller.yaml"
-    - name: head
-      reference_topic: "/sergio/head/references"
-      measurement_topic: "/sergio/head/measurements"
+    - name: neck
+      reference_topic: "/sergio/neck/references"
+      measurement_topic: "/sergio/neck/measurements"
       joint_names:
           - neck_pan_joint
           - neck_tilt_joint
