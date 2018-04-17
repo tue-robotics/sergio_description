@@ -6,7 +6,7 @@
     <review status="unreviewed" notes=""/>
    
    <!--mounting frame-->
-    <xacro:my_link name="torso_mounting_frame" mass="0.1" color="White"><!--ToDo: estimate mass-->
+    <xacro:my_link name="torso_mounting_frame" mass="0.1" color="Grey"><!--ToDo: estimate mass-->
         <box size="0.500 0.400 0.05" /><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.0 0.0 0.025" rpy="0 0 0"/>
         <origin xyz="0.0 0.0 0.025" rpy="0 0 0"/>
@@ -14,7 +14,7 @@
     </xacro:my_link>
     
     <!-- Lower rear leg -->
-    <xacro:my_link name="lower_rear_leg" mass="5" color="White"><!--ToDo: estimate mass-->
+    <xacro:my_link name="lower_rear_leg" mass="5" color="Grey"><!--ToDo: estimate mass-->
         <box size="0.390 0.200 0.05" /><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.195 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
         <origin xyz="0.195 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
@@ -22,20 +22,48 @@
     </xacro:my_link>
     
     <!-- Upper leg (part from lower rear leg joint to trunk joint) -->
-    <xacro:my_link name="upper_leg" mass="5" color="White"><!--ToDo: estimate mass-->
-        <box size="0.4115 0.200 0.1" /><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.20575 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.20575 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
-        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
+    <!--
+    <xacro:my_link name="upper_leg" mass="5" color="White">
+        <box size="0.4115 0.200 0.1" />
+        <origin xyz="0.20575 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="0.20575 0.0 0.0" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </xacro:my_link>-->
+    <xacro:my_link_texturedmesh name="upper_leg" mass="5" texture="white"><!-- ToDo: estimate mass -->
+        <origin xyz="0.41575 -0.10 -0.02" rpy="0 0 1.57"/>
+        <origin xyz="0.41575 -0.10 -0.02" rpy="0 0 1.57"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!-- ToDo: estimate mass -->
+        <mesh filename="package://sergio_description/media/meshes/upper_leg_reduced10000.dae" scale="0.01 0.01 0.01"/>
+    </xacro:my_link_texturedmesh>
+    <xacro:my_link name="upper_leg_inside" mass="0.001" color="Black">
+        <box size="0.5115 0.200 0.06" />
+        <origin xyz="0.20 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="0.20 0.0 0.0" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
     </xacro:my_link>
     
     <!-- Trunk -->
-    <xacro:my_link name="trunk" mass="10" color="White"><!--ToDo: estimate mass-->
-        <box size="0.470 0.200 0.15" /><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.235 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.235 0.0 0.0" rpy="0 0 0"/><!--ToDo: check dimensions, adjust height-->
-        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
-    </xacro:my_link>
+    <!--
+    <xacro:my_link name="trunk" mass="10" color="White">
+        <box size="0.470 0.200 0.15" />
+        <origin xyz="0.235 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="0.235 0.0 0.0" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </xacro:my_link>-->
+    <xacro:my_link_texturedmesh name="trunk" mass="10" texture="white"><!-- ToDo: estimate mass -->
+        <origin xyz="0.16 -0.11 0.0" rpy="3.1415 1.73 0"/>
+        <origin xyz="0.16 -0.11 0.0" rpy="3.1415 1.73 0"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!-- ToDo: estimate mass -->
+        <!--<mesh filename="package://sergio_description/media/meshes/torso_reduced10000.dae" scale="0.01 0.01 0.01"/>-->
+        <mesh filename="package://sergio_description/media/meshes/torso.dae" scale="0.01 0.01 0.01"/>
+    </xacro:my_link_texturedmesh>
+    <xacro:my_link name="trunk_inside" mass="0.001" color="Black">
+        <box size="0.470 0.200 0.075" />
+        <origin xyz="0.235 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="0.235 0.0 0.0" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </xacro:my_link>-->
+    
     
     <!-- torso laser joint (center is the center of rotation of the laser)-->
     <xacro:my_link name="torso_laser_mount" mass="0.01" color="Black">
@@ -57,7 +85,7 @@
         <origin xyz="-0.185 0.0 0.0565" rpy="0 0 0"/><!-- ToDo: adjust height-->
         <dynamics damping="6.0" friction="4.87"/><!-- ToDo: adjust dynamics-->
         <axis xyz="0 -1 0"/><!--ToDo: DH parameters?-->
-        <limit effort="1000" velocity="0.265" lower="0.152" upper="1.00" /> <!--ToDo: adjust parameters-->
+        <limit effort="0.3" velocity="0.265" lower="0.152" upper="1.00" /> <!--ToDo: adjust parameters-->
         <!--<limit effort="1000" velocity="10" lower="0.87" upper="0.87" />--> <!--TEMP: fixed joint positions until control is fixed-->
     </xacro:my_joint>
     
@@ -65,17 +93,29 @@
         <origin xyz="0.390 0.0 0.0" rpy="3.14 3.14 0.0"/><!-- ToDo: adjust height-->
         <dynamics damping="6.0" friction="4.87"/><!-- ToDo: adjust dynamics-->
         <axis xyz="0 -1 0"/><!--ToDo: DH parameters?-->
-        <limit effort="1000" velocity="0.539" lower="0.419" upper="2.059" /> <!--ToDo: adjust parameters -->
+        <limit effort="0.3" velocity="0.539" lower="0.419" upper="2.059" /> <!--ToDo: adjust parameters -->
         <!--<limit effort="1000" velocity="10" lower="2.0" upper="2.0" />--> <!--TEMP: fixed joint positions until control is fixed -->
     </xacro:my_joint>
+    
+    <joint name="upper_leg_inside_joint" type="fixed">
+        <parent link="upper_leg"/>
+        <child link="upper_leg_inside"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0.0"/>
+    </joint>
     
     <xacro:my_joint name="hip_joint" type="revolute" parent="upper_leg" child="trunk">
         <origin xyz="0.4115 0.0 0.0" rpy="3.14 3.14 0.0"/><!-- ToDo: adjust height-->
         <dynamics damping="6.0" friction="4.87"/><!-- ToDo: adjust dynamics-->
         <axis xyz="0 -1 0"/><!--ToDo: DH parameters?-->
-        <limit effort="1000" velocity="0.375" lower="1.007" upper="2.31" /> <!--ToDo: adjust parameters --><!--Velocity: move in 4 s-->
+        <limit effort="0.3" velocity="0.375" lower="1.007" upper="2.31" /> <!--ToDo: adjust parameters --><!--Velocity: move in 4 s-->
         <!--<limit effort="1000" velocity="10" lower="2.36" upper="2.36" />--> <!--TEMP: fixed joint positions until control is fixed-->
     </xacro:my_joint>
+    
+    <joint name="trunk_inside_joint" type="fixed">
+        <parent link="trunk"/>
+        <child link="trunk_inside"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0.0"/>
+    </joint>
     
     <joint name="laser_tilt_joint" type="revolute" >
         <parent link="trunk" />
