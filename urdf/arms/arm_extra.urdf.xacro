@@ -17,9 +17,9 @@ it has to be reversable and xml cannot multiply - or + but can multiply
 <xacro:macro name="arm_extra" params="whichside sidesign rollsign">
      
 <xacro:my_link name="pitch_axis_${whichside}" mass="0.15" color="White">
-   <cylinder radius="0.035" length="0.220" /><!-- Length of tube should be correct (see report), origin depends on placement -->
-   <origin xyz="0.0 ${sidesign*-0.055} 0.0" rpy="1.57 0 0"/>
-   <origin xyz="0.0 ${sidesign*-0.055} 0.0" rpy="1.57 0 0 " />
+   <cylinder radius="0.035" length="0.11" /><!-- Length of tube should be correct (see report), origin depends on placement -->
+   <origin xyz="0.0 ${sidesign*-0.01} 0.0" rpy="1.57 0 0"/>
+   <origin xyz="0.0 ${sidesign*-0.01} 0.0" rpy="1.57 0 0 " />
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" /> <!-- 0.45993-->
 </xacro:my_link>
 
