@@ -104,9 +104,9 @@
     
     <!-- Batteries -->
     <xacro:my_link name="batteries" mass="0.1" color="Black"><!--ToDo: estimate mass-->
-        <box size="0.332 0.117 0.08" /><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <box size="0.332 0.120 0.1" /><!--ToDo: check dimensions, adjust height-->
+        <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
     </xacro:my_link>
     
@@ -182,9 +182,9 @@
     </joint>
     
     <joint name="battery_joint" type="fixed">
-        <parent link="base_link"/>
+        <parent link="base"/>
         <child link="batteries"/>
-        <origin xyz="0.0 0.2335 0.194" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.0 0.23 0.055" rpy="0.0 0.0 0.0"/>
     </joint>
     
     
