@@ -45,6 +45,12 @@
         <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
     </xacro:my_link>
 
+    <!-- Matrix creator -->
+    <link name="matrix">
+       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </link>
+
 
     <!-- joints -->
     <joint name="torso_mount_joint" type="fixed">
@@ -85,5 +91,11 @@
         <axis xyz="0 1 0"/>
         <limit effort="13.4" velocity="1.0" lower="0.0" upper="0.324" /> <!--ToDo: update-->
         </joint>
+
+    <joint name="trunk_matrix_joint" type="fixed">
+        <parent link="trunk"/>
+        <child link="matrix"/>
+        <origin xyz="0.5 0.0 0.10" rpy="0 1.570796 0"/>
+    </joint>
 
 </robot>
