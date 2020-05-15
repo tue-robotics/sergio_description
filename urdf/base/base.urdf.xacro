@@ -6,12 +6,13 @@
     <review status="unreviewed" notes=""/>
     
     <!--the root of the tf-tree, because it serves only this function it has no visuals-->
-    <xacro:my_link name="base_link" mass="0" color="White">
-       <cylinder radius="0.0" length="0.00" />
-       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
-    </xacro:my_link>
+    <link name="base_link">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+        <mass value="0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+      </inertial>
+    </link>
     
     <!--the base-->
     <xacro:my_link_texturedmesh name="base" mass="0.1" texture="white">
@@ -50,12 +51,13 @@
     </xacro:my_link>
     
     <!-- base - torso interface -->
-    <xacro:my_link name="base_torso_mount" mass="0" color="White">
-       <cylinder radius="0.0" length="0.00" />
-       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
-    </xacro:my_link>
+    <link name="base_torso_mount">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+        <mass value="0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+      </inertial>
+    </link>
 
     <!-- base - laser interface -->
     <xacro:my_link name="laser_mount" mass="0.01" color="White">

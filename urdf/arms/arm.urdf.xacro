@@ -53,12 +53,13 @@
 
     <!--the elbow
     note: not visible, see arm_extra_visuals for the elbow visuals -->
-    <xacro:my_link name="elbow_link4_${whichside}" mass="0.1" color="Grey">
-       <cylinder radius="0.0" length="0.0"/>
-       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-       <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.6" iyz="0" izz="0.001" />
-    </xacro:my_link>
+    <link name="elbow_link4_${whichside}">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.6" iyz="0" izz="0.001"/>
+      </inertial>
+    </link>
 
     <!--the forearm-->
     <xacro:my_link_texturedmesh name="fore_arm_${whichside}" mass="0.85" texture="white">
@@ -70,12 +71,13 @@
 
     <!--the wrist
     note: not visible, see arm_extra_visuals for the wrist visuals -->
-    <xacro:my_link name="wrist_link6_${whichside}" mass="0.01" color="Black">
-       <cylinder radius="0.0" length="0.0"/>
-       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-       <origin xyz="0.0 0.0 0.0" rpy="1.5708 0 0" />
-       <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.03322" iyz="0" izz="0.001" />
-    </xacro:my_link>
+    <link name="wrist_link6_${whichside}">
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.03322" iyz="0" izz="0.001"/>
+      </inertial>
+    </link>
 
     <!--the hand -->
     <xacro:my_link name="hand_${whichside}" mass="0.20" color="Grey">
@@ -167,13 +169,14 @@
 
     <!--the grippoint
     note: not visible, purely kinematic-->
-    <xacro:my_link name="grippoint_${whichside}" mass="0.01" color="Blue">
-       <box size="0.0 0.0 0.0"/>
-       <origin xyz="-0.1 0.0 0.0" rpy="0 0 0"/>
-       <origin xyz="-0.1 0.0 0.0" rpy="0 0 0 " />
-       <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
-    </xacro:my_link>
 
+    <link name="grippoint_${whichside}">
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.1 0.0 0.0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+      </inertial>
+    </link>
 
     <!--the joints start here-->
 
