@@ -13,37 +13,39 @@
        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
     </xacro:my_link>
     
+    <!--the base-->
+    <xacro:my_link_texturedmesh name="base" mass="0.1" texture="white">
+        <origin xyz="-0.295 0.10 -0.14" rpy="0 0 1.57"/>
+        <origin xyz="-0.295 0.10 -0.14" rpy="0 0 1.57" />
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        <!--<mesh filename="package://sergio_description/media/meshes/Base2_reduced.dae" scale="0.01 0.01 0.01"/>-->
+        <!--<mesh filename="package://sergio_description/media/meshes/Base2_reduced10000.dae" scale="0.01 0.01 0.01"/>-->
+        <!--<mesh filename="package://sergio_description/media/meshes/BaseWithTexture.dae" scale="0.01 0.01 0.01"/>-->
+        <mesh filename="package://sergio_description/media/meshes/Base2.dae" scale="0.01 0.01 0.01"/>
+    </xacro:my_link_texturedmesh>
+
     <!--base block-->
-    <xacro:my_link name="base" mass="0.1" color="White"><!--ToDo: estimate mass-->
-        <!--box size="0.713 0.500 0.11" /--><!--ToDo: check dimensions, adjust height-->
-        
+    <xacro:my_link name="base_block" mass="0.1" color="Black"><!--ToDo: estimate mass-->
         <!-- Large box for better self-filtering -->
-        <box size="0.73 0.650 0.14" />
+        <box size="0.68 0.45 0.11" />
         
-        <origin xyz="-0.02 0.0 -0.015" rpy="0 0 0"/>
-        <origin xyz="-0.02 0.0 -0.015" rpy="0 0 0"/>
+        <origin xyz="-0.02 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="-0.02 0.0 0.0" rpy="0 0 0"/>
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
-    </xacro:my_link>    
+    </xacro:my_link>
     
     <!-- side pots -->
     <xacro:my_link name="sidepot_left" mass="0.1" color="White"><!--ToDo: estimate mass-->
-        <box size="0.43 0.165 0.13" /><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
-        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
+        <box size="0.360 0.0615 0.1" /><!--ToDo: check dimensions, adjust height-->
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
     </xacro:my_link>
     
     <xacro:my_link name="sidepot_right" mass="0.1" color="White"><!--ToDo: estimate mass-->
-        <box size="0.43 0.165 0.13" /><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
-        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
-        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
-    </xacro:my_link>
-    
-    <xacro:my_link name="sidepot_back" mass="0.1" color="White"><!--ToDo: estimate mass-->
-        <box size="0.16 0.65 0.13" /><!--ToDo: check dimensions, adjust height-->
-        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
-        <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
+        <box size="0.360 0.0615 0.1" /><!--ToDo: check dimensions, adjust height-->
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
     </xacro:my_link>
     
@@ -71,6 +73,43 @@
        <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
     </xacro:my_link>
     
+    <!-- wheels -->
+    <xacro:my_link name="wheel_right_front" mass="0" color="DarkGrey">
+       <cylinder radius="0.075" length="0.055" />
+       <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0"/>
+       <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0" />
+       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </xacro:my_link>
+
+    <xacro:my_link name="wheel_left_front" mass="0" color="DarkGrey">
+       <cylinder radius="0.075" length="0.055" />
+       <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0"/>
+       <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0" />
+       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </xacro:my_link>
+
+    <xacro:my_link name="wheel_right_rear" mass="0" color="DarkGrey">
+       <cylinder radius="0.075" length="0.055" />
+       <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0"/>
+       <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0" />
+       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </xacro:my_link>
+
+    <xacro:my_link name="wheel_left_rear" mass="0" color="DarkGrey">
+       <cylinder radius="0.075" length="0.055" />
+       <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0"/>
+       <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0" />
+       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </xacro:my_link>
+
+    <!-- Batteries -->
+    <xacro:my_link name="batteries" mass="0.1" color="Black"><!--ToDo: estimate mass-->
+        <box size="0.332 0.120 0.1" /><!--ToDo: check dimensions, adjust height-->
+        <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /><!--Estimate inertia-->
+    </xacro:my_link>
+
     <!-- joints -->
     <joint name="base_link_joint" type="fixed">
         <parent link="base_link"/>
@@ -78,26 +117,26 @@
         <axis xyz="1 0 0"/>
         <origin xyz="0.0 0.0 0.085" rpy="0 0 0"/><!--ToDO: adjust height-->
     </joint>
+
+    <joint name="base_block_joint" type="fixed">
+        <parent link="base"/>
+        <child link="base_block"/>
+        <axis xyz="1 0 0"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/><!--ToDO: adjust height-->
+    </joint>
     
     <joint name="sidepot_left_joint" type="fixed">
         <parent link="base"/>
         <child link="sidepot_left"/>
         <axis xyz="1 0 0"/>
-        <origin xyz="-0.01 0.2425 0.045" rpy="0 0 0"/><!--ToDO: adjust distance-->
+        <origin xyz="0.0 0.2425 0.045" rpy="0 0 0"/><!--ToDO: adjust distance-->
     </joint>
     
     <joint name="sidepot_right_joint" type="fixed">
         <parent link="base"/>
         <child link="sidepot_right"/>
         <axis xyz="1 0 0"/>
-        <origin xyz="-0.01 -0.2425 0.045" rpy="0 0 0"/><!--ToDO: adjust distance-->
-    </joint>
-    
-    <joint name="sidepot_back_joint" type="fixed">
-        <parent link="base"/>
-        <child link="sidepot_back"/>
-        <axis xyz="1 0 0"/>
-        <origin xyz="-0.305 0.0 0.045" rpy="0 0 0"/><!--ToDO: adjust distance-->
+        <origin xyz="0.0 -0.2425 0.045" rpy="0 0 0"/><!--ToDO: adjust distance-->
     </joint>
     
     <joint name="base_mount_joint" type="fixed">
@@ -118,5 +157,37 @@
         <origin xyz="-0.293 0.0 0.157" rpy="0.0 0.0 0.0"/>
     </joint>
     
+    <joint name="wheel_right_front_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="wheel_right_front"/>
+        <origin xyz="0.265 -0.275 0.075" rpy="1.57 0.0 0.0"/>
+    </joint>
+
+    <joint name="wheel_left_front_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="wheel_left_front"/>
+        <origin xyz="0.265 0.275 0.075" rpy="1.57 0.0 0.0"/>
+    </joint>
+
+    <joint name="wheel_right_rear_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="wheel_right_rear"/>
+        <origin xyz="-0.265 -0.275 0.075" rpy="1.57 0.0 0.0"/>
+    </joint>
+
+    <joint name="wheel_left_rear_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="wheel_left_rear"/>
+        <origin xyz="-0.265 0.275 0.075" rpy="1.57 0.0 0.0"/>
+    </joint>
+
+    <joint name="battery_joint" type="fixed">
+        <parent link="base"/>
+        <child link="batteries"/>
+        <origin xyz="0.0 0.23 0.055" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+
+
 </robot>
     

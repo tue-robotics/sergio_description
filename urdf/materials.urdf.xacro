@@ -38,26 +38,26 @@
     <color rgba="0.6 0.6 0.6 1.0"/>
   </material>
   
+  <material name="DarkGrey">
+    <color rgba="0.25 0.25 0.25 1.0"/>
+  </material>
+  
   <material name="Orange">
     <color rgba="1.0 0.33 0.0 1.0"/>
   </material>
-  
-  <material name="sergio_description/bottomcovers">
-    <texture filename="package://sergio_description/media/materials/textures/bottomcovers/finalreduced.jpg" />
-  </material>
-  
-    <material name="sergio_description/white">
+
+  <material name="sergio_description/white">
     <texture filename="package://sergio_description/media/materials/textures/white/white.jpg" />
   </material>
-  
+
   <material name="sergio_description/logo">
     <texture filename="package://sergio_description/media/materials/textures/logo/tue.jpg" />
   </material>
-  
+
   <material name="sergio_description/aluminium">
     <texture filename="package://sergio_description/media/materials/textures/aluminium/aluminium_0001_c.jpg" />
   </material>
-  
+
   <material name="sergio_description/orange">
     <texture filename="package://sergio_description/media/materials/textures/orange/orange.jpg" />
   </material>
